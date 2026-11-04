@@ -1,0 +1,3944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mati - Bharat Ki | Inquisitive Earthen Destination | Mati Farm™</title>
+  <meta name="description" content="Mati - Bharat Ki (Mati Farm™): Inquisitive Earthen Destination. 100% organic, hand-thrown terracotta earthenware, ceremonial oil lamps, and commercial tandoori chai kulhads. Direct-from-kiln D2C retail packs and global hospitality B2B wholesale supply.">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="logo.png">
+  <meta property="og:title" content="Mati - Bharat Ki | Inquisitive Earthen Destination">
+  <meta property="og:description" content="Master Artisans of Authentic Indian Terracotta, Sacred Clay Diyas & Commercial Chai Kulhads.">
+  <meta property="og:image" content="logo.png">
+  
+  <!-- Modern Typography: Playfair Display, Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Pro/Free Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       MATI FARM™ GLOBAL DESIGN SYSTEM & BRAND TOKENS
+       ========================================================================== */
+    :root {
+      --terracotta-primary: #B84A24;
+      --terracotta-deep: #8F3314;
+      --terracotta-vibrant: #D95D32;
+      --terracotta-wash: #FAF0E9;
+      --sand-canvas: #FAF7F2;
+      --sand-elevated: #F5EFE6;
+      --surface-card: #FFFFFF;
+      --clay-charcoal: #20140E;
+      --clay-earth: #42291A;
+      --gold-warm: #D97706;
+      --gold-bright: #F59E0B;
+      --gold-soft: #FEF3C7;
+      --emerald-organic: #1E7E4E;
+      --emerald-wash: #E9F7EF;
+      --text-dominant: #1C130D;
+      --text-muted: #66564C;
+      --text-subtle: #96857A;
+      --border-refined: #E8DDD4;
+      --border-accent: #D7C4B7;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+      --shadow-subtle: 0 2px 10px rgba(32, 20, 14, 0.05);
+      --shadow-hover: 0 10px 30px rgba(32, 20, 14, 0.08);
+      --shadow-elevated: 0 20px 48px rgba(32, 20, 14, 0.12);
+      --font-display: 'Cinzel', 'Outfit', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --transition-fluid: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--sand-canvas);
+      color: var(--text-dominant);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 8% 15%, rgba(184, 74, 36, 0.035) 0%, transparent 45%),
+        radial-gradient(circle at 92% 78%, rgba(217, 119, 6, 0.035) 0%, transparent 45%);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       GLOBAL UTILITY BAR: CURRENCY SELECTOR & PROCUREMENT MODES
+       ========================================================================== */
+    .top-announcement-bar {
+      background: linear-gradient(90deg, #180D08 0%, #30170D 50%, #4D1F10 100%);
+      color: #FFFFFF;
+      font-size: 12.5px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .announcement-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .announcement-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      color: #F0E6DE;
+    }
+
+    .announcement-left i {
+      color: var(--gold-bright);
+    }
+
+    .announcement-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    /* Currency Switcher */
+    .currency-selector-wrap {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-pill);
+      padding: 2px 4px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+
+    .currency-btn {
+      background: transparent;
+      border: none;
+      color: #D6C7BC;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--transition-fluid);
+      font-size: 11.5px;
+    }
+
+    .currency-btn.active {
+      background: #FFFFFF;
+      color: var(--clay-charcoal);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Mode Pill */
+    .procurement-pill-wrap {
+      display: inline-flex;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: var(--radius-pill);
+      padding: 3px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .procurement-btn {
+      background: transparent;
+      border: none;
+      color: #E0D3C9;
+      padding: 3px 13px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-fluid);
+    }
+
+    .procurement-btn.active {
+      background: #FFFFFF;
+      color: var(--terracotta-deep);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .corporate-hotline {
+      color: #F8E6DD;
+      font-weight: 600;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-fluid);
+    }
+
+    .corporate-hotline:hover {
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       PRIMARY NAVIGATION HEADER
+       ========================================================================== */
+    .primary-header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-subtle);
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: #FFFFFF;
+      box-shadow: 0 3px 12px rgba(184, 74, 36, 0.25);
+      border: 2px solid rgba(225, 103, 26, 0.35);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      flex-shrink: 0;
+    }
+
+    .brand-mark:hover .brand-logo-img {
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 6px 18px rgba(184, 74, 36, 0.38);
+    }
+
+    .brand-typography h1 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+    }
+
+    .brand-accent-highlight {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #E1671A;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(225, 103, 26, 0.1);
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(225, 103, 26, 0.25);
+    }
+
+    .brand-typography span {
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      font-weight: 700;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .navigation-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-anchor {
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--text-dominant);
+      transition: var(--transition-fluid);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-anchor:hover, .nav-anchor.active {
+      color: var(--terracotta-primary);
+    }
+
+    .nav-tag-badge {
+      background: var(--gold-warm);
+      color: #FFFFFF;
+      font-size: 9.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .header-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cart-trigger-pill {
+      position: relative;
+      background: var(--terracotta-wash);
+      color: var(--terracotta-deep);
+      border: 1px solid rgba(184, 74, 36, 0.2);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      cursor: pointer;
+      transition: var(--transition-fluid);
+    }
+
+    .cart-trigger-pill:hover {
+      background: var(--terracotta-primary);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .cart-badge-indicator {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: var(--gold-bright);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #FFFFFF;
+    }
+
+    .btn-enterprise-portal {
+      background: linear-gradient(135deg, var(--clay-charcoal) 0%, var(--clay-earth) 100%);
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-fluid);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-enterprise-portal:hover {
+      background: var(--terracotta-primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(184, 74, 36, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       HERO CURATION: EDITORIAL ARTISANAL SHOWCASE
+       ========================================================================== */
+    .hero-curation {
+      position: relative;
+      padding: 64px 0 72px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--sand-canvas) 100%);
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .editorial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--terracotta-wash);
+      color: var(--terracotta-primary);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: 1px solid rgba(184, 74, 36, 0.2);
+      margin-bottom: 18px;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: 46px;
+      line-height: 1.16;
+      color: var(--clay-charcoal);
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-headline .terracotta-gradient {
+      color: var(--terracotta-primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-synopsis {
+      font-size: 16.5px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 580px;
+      line-height: 1.65;
+    }
+
+    .credibility-matrix {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .credibility-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-refined);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dominant);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .credibility-pill i {
+      color: var(--emerald-organic);
+    }
+
+    .hero-action-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-hero-primary {
+      background: linear-gradient(135deg, var(--terracotta-primary) 0%, var(--terracotta-deep) 100%);
+      color: #FFFFFF;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-size: 14.5px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px rgba(184, 74, 36, 0.28);
+      transition: var(--transition-fluid);
+    }
+
+    .btn-hero-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(184, 74, 36, 0.38);
+    }
+
+    .btn-hero-secondary {
+      background: #FFFFFF;
+      color: var(--clay-charcoal);
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      font-size: 14.5px;
+      font-weight: 700;
+      border: 2px solid var(--border-refined);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-fluid);
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: var(--terracotta-primary);
+      color: var(--terracotta-primary);
+      background: var(--terracotta-wash);
+      transform: translateY(-2px);
+    }
+
+    /* Showcase Display Panel */
+    .hero-visual-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-elevated);
+      border: 1px solid var(--border-refined);
+      position: relative;
+    }
+
+    .hero-visual-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--terracotta-primary), var(--gold-bright), var(--emerald-organic));
+      border-top-left-radius: var(--radius-lg);
+      border-top-right-radius: var(--radius-lg);
+    }
+
+    .signature-duo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .visual-tile {
+      background: linear-gradient(145deg, #FCFAF7 0%, #F5EDE4 100%);
+      border-radius: var(--radius-md);
+      padding: 18px 14px;
+      text-align: center;
+      border: 1px dashed var(--border-accent);
+      transition: var(--transition-fluid);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .visual-tile:hover {
+      transform: translateY(-4px);
+      border-color: var(--terracotta-primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tile-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--terracotta-primary);
+      color: #FFFFFF;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tile-svg-viewport {
+      width: 100%;
+      height: 126px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .visual-tile h4 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--clay-charcoal);
+      margin-bottom: 3px;
+    }
+
+    .visual-tile p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .tile-pricing-dual {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .retail-tag-highlight {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--terracotta-deep);
+    }
+
+    .wholesale-tag-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--emerald-organic);
+      background: var(--emerald-wash);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .promotional-ribbon {
+      background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+      border: 1px solid #FED7AA;
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+    }
+
+    .promotional-ribbon span {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #9A3412;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .promotional-code-tag {
+      background: #9A3412;
+      color: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    /* ==========================================================================
+       PROCUREMENT CHANNEL SELECTOR (D2C VS B2B ENTERPRISE)
+       ========================================================================== */
+    .procurement-channel-section {
+      padding: 28px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .channel-matrix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .channel-box {
+      border: 2px solid var(--border-refined);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      background: var(--sand-canvas);
+      cursor: pointer;
+      transition: var(--transition-fluid);
+      position: relative;
+    }
+
+    .channel-box.active {
+      border-color: var(--terracotta-primary);
+      background: #FFFBF8;
+      box-shadow: 0 4px 20px rgba(184, 74, 36, 0.1);
+    }
+
+    .channel-box-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .channel-box.d2c .channel-box-icon {
+      background: var(--terracotta-wash);
+      color: var(--terracotta-primary);
+    }
+
+    .channel-box.b2b .channel-box-icon {
+      background: var(--emerald-wash);
+      color: var(--emerald-organic);
+    }
+
+    .channel-content h3 {
+      font-size: 17.5px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .channel-content p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .channel-specs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .channel-feature-pill {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-refined);
+    }
+
+    .channel-status-dot {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--border-refined);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: transparent;
+      transition: var(--transition-fluid);
+    }
+
+    .channel-box.active .channel-status-dot {
+      background: var(--terracotta-primary);
+      border-color: var(--terracotta-primary);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       CURATED CATALOG & PRODUCT MATRIX
+       ========================================================================== */
+    .catalog-curation-section {
+      padding: 64px 0;
+    }
+
+    .editorial-header-block {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .editorial-eyebrow {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--terracotta-primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .editorial-title {
+      font-family: var(--font-display);
+      font-size: 36px;
+      color: var(--clay-charcoal);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .editorial-subhead {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Filter Controls */
+    .catalog-filters-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+      background: #FFFFFF;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid var(--border-refined);
+    }
+
+    .category-navigation-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .category-filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-refined);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-fluid);
+    }
+
+    .category-filter-btn:hover, .category-filter-btn.active {
+      background: var(--terracotta-primary);
+      color: #FFFFFF;
+      border-color: var(--terracotta-primary);
+      box-shadow: 0 4px 14px rgba(184, 74, 36, 0.22);
+    }
+
+    .search-sort-module {
+      position: relative;
+    }
+
+    .search-sort-module input {
+      padding: 9px 16px 9px 38px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-refined);
+      font-size: 13px;
+      width: 250px;
+      outline: none;
+      transition: var(--transition-fluid);
+      background: var(--sand-canvas);
+    }
+
+    .search-sort-module input:focus {
+      border-color: var(--terracotta-primary);
+      background: #FFFFFF;
+      width: 280px;
+    }
+
+    .search-sort-module i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-subtle);
+      font-size: 13px;
+    }
+
+    /* Products Grid */
+    .products-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+      gap: 26px;
+    }
+
+    .artisan-product-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-refined);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-fluid);
+      position: relative;
+    }
+
+    .artisan-product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-elevated);
+      border-color: var(--border-accent);
+    }
+
+    .product-overhead-badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .badge-eco-certified {
+      background: rgba(30, 126, 78, 0.92);
+      color: #FFFFFF;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+    }
+
+    .badge-tier-indicator {
+      background: var(--clay-charcoal);
+      color: var(--gold-bright);
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .product-visual-stage {
+      height: 200px;
+      background: linear-gradient(135deg, #FCFAF8 0%, #F4ECE4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .product-visual-stage svg {
+      transition: transform 0.4s ease;
+    }
+
+    .artisan-product-card:hover .product-visual-stage svg {
+      transform: scale(1.08);
+    }
+
+    .product-body-content {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .category-classification {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--terracotta-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .product-headline {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      margin-bottom: 6px;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    .product-headline:hover {
+      color: var(--terracotta-primary);
+    }
+
+    .product-meta-descriptors {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .product-meta-descriptors span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dual-pricing-capsule {
+      background: var(--sand-canvas);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      margin-bottom: 14px;
+      border: 1px solid #ECE0D5;
+    }
+
+    .d2c-price-view {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .retail-amount {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--terracotta-deep);
+    }
+
+    .retail-packaging-info {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .b2b-price-view {
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed #DFC8BA;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .wholesale-amount {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--emerald-organic);
+    }
+
+    .moq-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--clay-earth);
+      background: #ECE0D6;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .card-footer-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .btn-action-cart {
+      flex: 1;
+      background: var(--terracotta-primary);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: var(--transition-fluid);
+    }
+
+    .btn-action-cart:hover {
+      background: var(--terracotta-deep);
+    }
+
+    .btn-action-b2b {
+      flex: 1;
+      background: var(--clay-charcoal);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: var(--transition-fluid);
+    }
+
+    .btn-action-b2b:hover {
+      background: var(--terracotta-primary);
+    }
+
+    .btn-action-inspect {
+      background: var(--sand-canvas);
+      color: var(--clay-charcoal);
+      border: 1px solid var(--border-refined);
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-fluid);
+    }
+
+    .btn-action-inspect:hover {
+      background: #FFFFFF;
+      border-color: var(--terracotta-primary);
+      color: var(--terracotta-primary);
+    }
+
+    /* ==========================================================================
+       ENTERPRISE WHOLESALE PROCUREMENT ENGINE & CALCULATOR
+       ========================================================================== */
+    .b2b-procurement-section {
+      padding: 68px 0;
+      background: linear-gradient(180deg, var(--sand-canvas) 0%, #FFFFFF 100%);
+      border-top: 1px solid var(--border-refined);
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .procurement-calculator-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-refined);
+      box-shadow: var(--shadow-elevated);
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 44px;
+    }
+
+    .calculator-controls-left h3 {
+      font-family: var(--font-display);
+      font-size: 29px;
+      color: var(--clay-charcoal);
+      margin-bottom: 8px;
+    }
+
+    .calculator-controls-left p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .control-field-group {
+      margin-bottom: 20px;
+    }
+
+    .control-field-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--clay-charcoal);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .control-select, .control-input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-refined);
+      font-size: 13.5px;
+      background: var(--sand-canvas);
+      outline: none;
+      transition: var(--transition-fluid);
+    }
+
+    .control-select:focus, .control-input:focus {
+      border-color: var(--terracotta-primary);
+      background: #FFFFFF;
+    }
+
+    .slider-range-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .slider-output-readout {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--terracotta-deep);
+    }
+
+    .range-input-slider {
+      width: 100%;
+      accent-color: var(--terracotta-primary);
+      height: 6px;
+      cursor: pointer;
+    }
+
+    .checkbox-specification-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .checkbox-specification-row input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--terracotta-primary);
+    }
+
+    /* Quotation Summary Panel */
+    .quotation-summary-panel {
+      background: linear-gradient(145deg, #1C110B 0%, #100804 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quotation-summary-panel::before {
+      content: '🏛️';
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      font-size: 120px;
+      opacity: 0.04;
+    }
+
+    .summary-heading-box {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .summary-heading-box h4 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--gold-bright);
+    }
+
+    .summary-heading-box span {
+      font-size: 11.5px;
+      color: #CFC0B5;
+    }
+
+    .breakdown-line-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #E2D5CC;
+    }
+
+    .breakdown-row.highlight-metric {
+      color: #4ADE80;
+      font-weight: 700;
+    }
+
+    .breakdown-row.grand-total-row {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 14px;
+      margin-top: 6px;
+    }
+
+    .summary-actions-cluster {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-dispatch-whatsapp {
+      background: #25D366;
+      color: #FFFFFF;
+      border: none;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: var(--transition-fluid);
+    }
+
+    .btn-dispatch-whatsapp:hover {
+      background: #1EBE5D;
+      transform: translateY(-2px);
+    }
+
+    .btn-sample-kit-action {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: var(--transition-fluid);
+    }
+
+    .btn-sample-kit-action:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* ==========================================================================
+       ARTISAN GUILD STEWARDSHIP & ZERO-WASTE PHILOSOPHY
+       ========================================================================== */
+    .artisan-stewardship-section {
+      padding: 68px 0;
+      background: #FFFFFF;
+    }
+
+    .stewardship-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 54px;
+    }
+
+    .guild-stats-card {
+      background: var(--sand-canvas);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--border-refined);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .guild-metrics-matrix {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .metric-cell {
+      background: #FFFFFF;
+      padding: 18px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-refined);
+      text-align: center;
+    }
+
+    .metric-stat-number {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--terracotta-deep);
+      font-weight: 800;
+    }
+
+    .metric-stat-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 2px;
+    }
+
+    .artisan-narrative h3 {
+      font-family: var(--font-display);
+      font-size: 34px;
+      color: var(--clay-charcoal);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .artisan-narrative p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      line-height: 1.65;
+    }
+
+    .process-timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .timeline-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .timeline-index-pill {
+      width: 32px;
+      height: 32px;
+      background: var(--terracotta-wash);
+      color: var(--terracotta-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .timeline-step-text h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--clay-charcoal);
+      margin-bottom: 2px;
+    }
+
+    .timeline-step-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       ENGINEERED TRANSIT PACKAGING (ZERO DAMAGE)
+       ========================================================================== */
+    .packaging-guarantee-section {
+      padding: 56px 0;
+      background: var(--sand-canvas);
+      border-top: 1px solid var(--border-refined);
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .packaging-triad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .packaging-pillar-card {
+      background: #FFFFFF;
+      padding: 26px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-refined);
+      box-shadow: var(--shadow-subtle);
+      text-align: center;
+      transition: var(--transition-fluid);
+    }
+
+    .packaging-pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .pillar-icon-box {
+      font-size: 32px;
+      color: var(--terracotta-primary);
+      margin-bottom: 14px;
+    }
+
+    .packaging-pillar-card h4 {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      margin-bottom: 6px;
+    }
+
+    .packaging-pillar-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Partner Trust Bar */
+    .partner-validation-section {
+      padding: 46px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .partner-roster-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      opacity: 0.85;
+    }
+
+    .partner-badge-item {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--clay-earth);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .partner-badge-item i {
+      color: var(--terracotta-primary);
+    }
+
+    /* ==========================================================================
+       FOOTER ECOSYSTEM
+       ========================================================================== */
+    .site-footer {
+      background: #140C07;
+      color: #E8DDD5;
+      padding: 64px 0 32px;
+      font-size: 13.5px;
+    }
+
+    .footer-columns-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 44px;
+    }
+
+    .footer-brand-column h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-column p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #BDB0A6;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav-column h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gold-bright);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .footer-hyperlinks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-hyperlinks a {
+      color: #CFC0B5;
+      transition: var(--transition-fluid);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-hyperlinks a:hover {
+      color: #FFFFFF;
+      transform: translateX(4px);
+    }
+
+    .contact-descriptor-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #CFC0B5;
+      font-size: 13px;
+    }
+
+    .contact-descriptor-row i {
+      color: var(--terracotta-vibrant);
+      margin-top: 3px;
+    }
+
+    .footer-legal-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+      color: #9C8D82;
+    }
+
+    /* ==========================================================================
+       CART SLIDEOUT DRAWER & CHECKOUT MODALS
+       ========================================================================== */
+    .cart-drawer-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(16, 10, 6, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .cart-drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer-sidepanel {
+      position: fixed;
+      top: 0;
+      right: -480px;
+      width: 100%;
+      max-width: 440px;
+      height: 100%;
+      background: #FFFFFF;
+      z-index: 1001;
+      box-shadow: -6px 0 30px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cart-drawer-sidepanel.open {
+      right: 0;
+    }
+
+    .cart-panel-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-refined);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--sand-canvas);
+    }
+
+    .cart-panel-header h3 {
+      font-size: 17.5px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .close-panel-btn {
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition-fluid);
+    }
+
+    .close-panel-btn:hover {
+      background: var(--border-refined);
+      color: var(--clay-charcoal);
+    }
+
+    .free-shipping-tracker {
+      background: var(--terracotta-wash);
+      padding: 10px 24px;
+      font-size: 12px;
+      color: var(--terracotta-deep);
+      font-weight: 600;
+      border-bottom: 1px solid #FCD9C8;
+    }
+
+    .progress-track {
+      height: 6px;
+      background: #FCD9C8;
+      border-radius: var(--radius-pill);
+      margin-top: 6px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--terracotta-primary);
+      width: 40%;
+      transition: width 0.3s ease;
+    }
+
+    .cart-line-items-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .cart-item-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-refined);
+    }
+
+    .cart-item-thumb {
+      width: 62px;
+      height: 62px;
+      background: var(--sand-canvas);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border-refined);
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--clay-charcoal);
+      line-height: 1.3;
+      margin-bottom: 2px;
+    }
+
+    .cart-item-spec {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .cart-item-cost {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--terracotta-deep);
+    }
+
+    .cart-item-stepper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stepper-btn {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border-refined);
+      background: #FFFFFF;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fluid);
+    }
+
+    .stepper-btn:hover {
+      background: var(--sand-canvas);
+      border-color: var(--terracotta-primary);
+    }
+
+    .stepper-count {
+      font-size: 13px;
+      font-weight: 700;
+      width: 22px;
+      text-align: center;
+    }
+
+    .cart-item-delete {
+      color: #DC2626;
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 4px;
+      transition: var(--transition-fluid);
+    }
+
+    .cart-item-delete:hover {
+      opacity: 0.7;
+    }
+
+    .empty-cart-state {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-cart-state i {
+      font-size: 46px;
+      color: var(--border-accent);
+      margin-bottom: 12px;
+    }
+
+    .cart-footer-summary {
+      padding: 20px 24px;
+      border-top: 1px solid var(--border-refined);
+      background: var(--sand-canvas);
+    }
+
+    .coupon-redemption-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .coupon-redemption-box input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border-refined);
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .coupon-redemption-box button {
+      background: var(--clay-charcoal);
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .calculation-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .calculation-row.net-payable {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      border-top: 1px solid var(--border-refined);
+      padding-top: 10px;
+      margin-top: 8px;
+    }
+
+    .btn-checkout-direct {
+      width: 100%;
+      background: linear-gradient(135deg, var(--terracotta-primary) 0%, var(--terracotta-deep) 100%);
+      color: #FFFFFF;
+      border: none;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      font-size: 14.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(184, 74, 36, 0.28);
+      transition: var(--transition-fluid);
+      margin-top: 14px;
+    }
+
+    .btn-checkout-direct:hover {
+      background: var(--terracotta-deep);
+      transform: translateY(-2px);
+    }
+
+    /* Modal Architecture */
+    .system-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(16, 10, 6, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .system-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-dialog-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 660px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-elevated);
+      border: 1px solid var(--border-refined);
+      position: relative;
+      animation: modalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalSlideIn {
+      from { transform: translateY(20px) scale(0.97); }
+      to { transform: translateY(0) scale(1); }
+    }
+
+    .dialog-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-refined);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--sand-canvas);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .dialog-header h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--clay-charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dialog-body {
+      padding: 24px;
+    }
+
+    .form-duo-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-entry-unit {
+      margin-bottom: 16px;
+    }
+
+    .form-entry-unit label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--clay-charcoal);
+      margin-bottom: 6px;
+    }
+
+    .form-entry-unit input, .form-entry-unit select, .form-entry-unit textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-refined);
+      font-size: 13px;
+      outline: none;
+      transition: var(--transition-fluid);
+      background: var(--sand-canvas);
+    }
+
+    .form-entry-unit input:focus, .form-entry-unit select:focus, .form-entry-unit textarea:focus {
+      border-color: var(--terracotta-primary);
+      background: #FFFFFF;
+    }
+
+    .payment-instruments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .instrument-card {
+      border: 1px solid var(--border-refined);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-fluid);
+      background: var(--sand-canvas);
+    }
+
+    .instrument-card.active {
+      border-color: var(--terracotta-primary);
+      background: var(--terracotta-wash);
+      color: var(--terracotta-deep);
+      font-weight: 700;
+    }
+
+    .instrument-card i {
+      font-size: 20px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .instrument-card span {
+      font-size: 12px;
+      display: block;
+    }
+
+    .success-celebration-pane {
+      text-align: center;
+      padding: 32px 10px;
+    }
+
+    .order-badge-pill {
+      display: inline-block;
+      background: var(--sand-canvas);
+      border: 1px dashed var(--border-refined);
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-weight: 800;
+      font-size: 13.5px;
+      color: var(--terracotta-primary);
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+    }
+
+    .quick-specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 26px;
+    }
+
+    .quick-specs-stage {
+      background: var(--sand-canvas);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-refined);
+    }
+
+    .volume-breakdown-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 12px;
+    }
+
+    .volume-breakdown-table th, .volume-breakdown-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border-refined);
+      text-align: left;
+    }
+
+    .volume-breakdown-table th {
+      background: var(--sand-canvas);
+      font-weight: 700;
+      color: var(--clay-charcoal);
+    }
+
+    /* Floating WhatsApp Connector */
+    .floating-concierge-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #FFFFFF;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 99;
+      transition: var(--transition-fluid);
+    }
+
+    .floating-concierge-pill:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+    }
+
+    /* Toast System */
+    .system-toast-bubble {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--clay-charcoal);
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-elevated);
+      z-index: 2000;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .system-toast-bubble.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive Adaptation */
+    @media (max-width: 992px) {
+      .hero-split-grid, .procurement-calculator-card, .stewardship-grid, .footer-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .packaging-triad-grid {
+        grid-template-columns: 1fr;
+      }
+      .navigation-menu {
+        display: none;
+      }
+      .hero-headline {
+        font-size: 36px;
+      }
+      .channel-matrix-grid {
+        grid-template-columns: 1fr;
+      }
+      .quick-specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-headline {
+        font-size: 30px;
+      }
+      .signature-duo-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-duo-columns {
+        grid-template-columns: 1fr;
+      }
+      .payment-instruments-grid {
+        grid-template-columns: 1fr;
+      }
+      .catalog-filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .search-sort-module input {
+        width: 100%;
+      }
+      .cart-drawer-sidepanel {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR WITH GLOBAL CURRENCY TOGGLE
+       ========================================================================== -->
+  <div class="top-announcement-bar">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <i class="fa-solid fa-earth-americas"></i>
+        <span><strong>Global Logistics:</strong> Pan-India Dispatch & International Commercial Export Available</span>
+      </div>
+
+      <div class="announcement-right">
+        <!-- Currency Converter Toggle -->
+        <div class="currency-selector-wrap" title="Switch Display Currency">
+          <button class="currency-btn active" id="currINR" onclick="setGlobalCurrency('INR')">INR (₹)</button>
+          <button class="currency-btn" id="currUSD" onclick="setGlobalCurrency('USD')">USD ($)</button>
+        </div>
+
+        <!-- Procurement Mode Switcher -->
+        <div class="procurement-pill-wrap" title="Select Procurement Channel">
+          <button class="procurement-btn active" id="modeD2C" onclick="switchProcurementMode('d2c')">
+            <i class="fa-solid fa-bag-shopping"></i> Retail (D2C)
+          </button>
+          <button class="procurement-btn" id="modeB2B" onclick="switchProcurementMode('b2b')">
+            <i class="fa-solid fa-building"></i> Commercial (B2B)
+          </button>
+        </div>
+
+        <a href="tel:+917454996566" class="corporate-hotline">
+          <i class="fa-solid fa-phone"></i> +91 7454996566
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PRIMARY NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="primary-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-mark">
+        <img src="logo.png" alt="Mati - Bharat Ki Logo" class="brand-logo-img">
+        <div class="brand-typography">
+          <h1>MATI <span class="brand-accent-highlight">BHARAT KI</span></h1>
+          <span>Inquisitive Earthen Destination</span>
+        </div>
+      </a>
+
+      <ul class="navigation-menu">
+        <li><a href="#catalog" class="nav-anchor active">Curated Catalog</a></li>
+        <li><a href="#catalog" class="nav-anchor" onclick="applyCategoryFilter('kulhad')">Chai Kulhads</a></li>
+        <li><a href="#catalog" class="nav-anchor" onclick="applyCategoryFilter('diya')">Sacred Diyas</a></li>
+        <li><a href="#b2b-calc" class="nav-anchor">Wholesale Estimator <span class="nav-tag-badge">B2B</span></a></li>
+        <li><a href="#stewardship" class="nav-anchor">Artisan Guild</a></li>
+        <li><a href="#packaging" class="nav-anchor">Zero-Damage Packaging</a></li>
+      </ul>
+
+      <div class="header-cta-group">
+        <button class="cart-trigger-pill" onclick="toggleCartDrawer()" aria-label="View Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge-indicator" id="cartCountBadge">0</span>
+        </button>
+
+        <button class="btn-enterprise-portal" onclick="launchWholesaleInquiryModal()">
+          <i class="fa-solid fa-file-invoice-dollar"></i> Wholesale Portal
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO CURATION: EDITORIAL ARTISANAL SHOWCASE
+       ========================================================================== -->
+  <section class="hero-curation" id="hero">
+    <div class="container hero-split-grid">
+      <div class="hero-content-column">
+        <div class="editorial-badge">
+          <i class="fa-solid fa-certificate"></i> Artisanal Terracotta • Certified Food Grade • 100% Biodegradable
+        </div>
+        <h2 class="hero-headline">
+          The Soul of Raw Earth. <br>
+          <span class="terracotta-gradient">Crafted for Discerning Homes</span> <br>
+          & Global Hospitality.
+        </h2>
+        <p class="hero-synopsis">
+          <strong>Mati Farm™</strong> curates certified lead-free, wheel-thrown terracotta tableware, ceremonial Akhand Jyot oil lamps, and authentic tandoori chai kulhads fired at 920°C. Engineered for mindful daily rituals, boutique tea lounges, and high-volume commercial catering franchises worldwide.
+        </p>
+
+        <div class="credibility-matrix">
+          <div class="credibility-pill"><i class="fa-solid fa-circle-check"></i> Zero Synthetic Chemicals or Lacquers</div>
+          <div class="credibility-pill"><i class="fa-solid fa-shield-halved"></i> Engineered Shock-Proof Export Crates</div>
+          <div class="credibility-pill"><i class="fa-solid fa-stamp"></i> Precision Brand Logo Embossing</div>
+        </div>
+
+        <div class="hero-action-cluster">
+          <a href="#catalog" class="btn-hero-primary" onclick="switchProcurementMode('d2c')">
+            <i class="fa-solid fa-bag-shopping"></i> Shop Bespoke Retail Packs
+          </a>
+          <a href="#b2b-calc" class="btn-hero-secondary" onclick="switchProcurementMode('b2b')">
+            <i class="fa-solid fa-calculator"></i> Calculate Wholesale Pricing
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual-card">
+        <div class="signature-duo-grid">
+          <!-- Item 1: Tandoori Kulhad -->
+          <div class="visual-tile" onclick="openProductQuickView('kulhad-tandoori')">
+            <span class="tile-badge">Top Seller</span>
+            <div class="tile-svg-viewport">
+              <svg width="120" height="120" viewBox="0 0 160 160" fill="none">
+                <path d="M70 30 Q65 15 75 5 Q85 15 78 30" stroke="#DF6C41" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+                <path d="M85 35 Q92 20 84 10 Q78 20 88 35" stroke="#DF6C41" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                <ellipse cx="80" cy="45" rx="36" ry="10" fill="#B84A24"/>
+                <ellipse cx="80" cy="44" rx="32" ry="8" fill="#5D2613"/>
+                <path d="M44 45 L54 130 C54 135 66 142 80 142 C94 142 106 135 106 130 L116 45 Z" fill="url(#heroGradK)"/>
+                <path d="M48 65 Q80 75 112 65" stroke="#8F3314" stroke-width="2" fill="none"/>
+                <path d="M51 85 Q80 95 109 85" stroke="#8F3314" stroke-width="2" fill="none"/>
+                <path d="M53 105 Q80 115 107 105" stroke="#8F3314" stroke-width="2" fill="none"/>
+                <defs>
+                  <linearGradient id="heroGradK" x1="44" y1="45" x2="116" y2="142" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#DF6C41"/>
+                    <stop offset="0.5" stop-color="#B84A24"/>
+                    <stop offset="1" stop-color="#8F3314"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h4>Tandoori Chai Kulhad</h4>
+            <p>120ml • Enhanced Thermal Mass</p>
+            <div class="tile-pricing-dual">
+              <span class="retail-tag-highlight" id="heroP1Retail">₹180 / Pack of 12</span>
+              <span class="wholesale-tag-badge" id="heroP1B2B">₹2.20/pc Bulk</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Sacred Diya -->
+          <div class="visual-tile" onclick="openProductQuickView('diya-traditional')">
+            <span class="tile-badge" style="background:var(--gold-warm);">Festive Votive</span>
+            <div class="tile-svg-viewport">
+              <svg width="120" height="120" viewBox="0 0 160 160" fill="none">
+                <circle cx="80" cy="45" r="24" fill="#F39C12" opacity="0.2"/>
+                <path d="M80 20 Q88 38 80 52 Q72 38 80 20 Z" fill="url(#heroGradFlame)"/>
+                <path d="M80 28 Q84 40 80 50 Q76 40 80 28 Z" fill="#FFF7CC"/>
+                <path d="M30 85 C30 85 45 125 80 125 C115 125 130 85 130 85 C115 95 80 95 30 85 Z" fill="url(#heroGradDiya)"/>
+                <ellipse cx="80" cy="85" rx="50" ry="12" fill="#B84A24"/>
+                <ellipse cx="80" cy="85" rx="44" ry="9" fill="#75290E"/>
+                <ellipse cx="80" cy="86" rx="38" ry="6" fill="#F39C12" opacity="0.4"/>
+                <path d="M74 80 L80 62 L86 80 Z" fill="#4A1E0E"/>
+                <defs>
+                  <linearGradient id="heroGradFlame" x1="80" y1="20" x2="80" y2="52" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFEAA7"/>
+                    <stop offset="0.6" stop-color="#F39C12"/>
+                    <stop offset="1" stop-color="#D35400"/>
+                  </linearGradient>
+                  <linearGradient id="heroGradDiya" x1="30" y1="85" x2="130" y2="125" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E17055"/>
+                    <stop offset="0.5" stop-color="#B84A24"/>
+                    <stop offset="1" stop-color="#6E230B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h4>Organic Sacred Puja Diya</h4>
+            <p>Deep Well • Seepage Resistant</p>
+            <div class="tile-pricing-dual">
+              <span class="retail-tag-highlight" id="heroP2Retail">₹99 / Pack of 25</span>
+              <span class="wholesale-tag-badge" id="heroP2B2B">₹0.65/pc Bulk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotional-ribbon">
+          <span><i class="fa-solid fa-gift"></i> Introductory Order Promotion (10% Off):</span>
+          <div class="promotional-code-tag">MATI10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROCUREMENT CHANNEL SELECTOR (D2C VS B2B ENTERPRISE)
+       ========================================================================== -->
+  <section class="procurement-channel-section">
+    <div class="container">
+      <div class="channel-matrix-grid">
+        <!-- Direct to Consumer -->
+        <div class="channel-box d2c active" id="channelBoxD2C" onclick="switchProcurementMode('d2c')">
+          <div class="channel-box-icon">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <div class="channel-content">
+            <h3>Direct-to-Consumer (D2C Retail)</h3>
+            <p>Curated residential packs (6, 12, 25, 50 units) for sacred temple ceremonies, festival celebrations, and artisan tea enthusiasts. Express doorstep fulfillment.</p>
+            <div class="channel-specs-row">
+              <span class="channel-feature-pill">Zero Minimum Order</span>
+              <span class="channel-feature-pill">Secure UPI / Cards / COD</span>
+              <span class="channel-feature-pill">Express 3-Day Transit</span>
+            </div>
+          </div>
+          <div class="channel-status-dot"><i class="fa-solid fa-check"></i></div>
+        </div>
+
+        <!-- B2B Enterprise -->
+        <div class="channel-box b2b" id="channelBoxB2B" onclick="switchProcurementMode('b2b')">
+          <div class="channel-box-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="channel-content">
+            <h3>Enterprise Wholesale (B2B Hospitality)</h3>
+            <p>Commercial volume supply (500 to 50,000+ units) for tea franchise chains, luxury hospitality resorts, corporate gifting, and overseas distributors with full GST input tax credit.</p>
+            <div class="channel-specs-row">
+              <span class="channel-feature-pill">Volume Tiers (From ₹1.65 / pc)</span>
+              <span class="channel-feature-pill">Precision Logo Embossing</span>
+              <span class="channel-feature-pill">Export Invoicing & GST Credit</span>
+            </div>
+          </div>
+          <div class="channel-status-dot"><i class="fa-solid fa-check"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CURATED CATALOG & PRODUCT MATRIX
+       ========================================================================== */
+  <section class="catalog-curation-section" id="catalog">
+    <div class="container">
+      <div class="editorial-header-block">
+        <span class="editorial-eyebrow">Artisan Guild Inventory</span>
+        <h2 class="editorial-title">Masterpiece Earthenware Collection</h2>
+        <p class="editorial-subhead">
+          Each item is wheel-thrown by generational master potters using nutrient-dense riverbed clay and baked at 920°C to achieve structural longevity, thermal equilibrium, and an evocative petrichor aroma.
+        </p>
+      </div>
+
+      <!-- Filters & Search -->
+      <div class="catalog-filters-bar">
+        <div class="category-navigation-pills">
+          <button class="category-filter-btn active" onclick="applyCategoryFilter('all', this)">
+            <i class="fa-solid fa-shapes"></i> All Creations
+          </button>
+          <button class="category-filter-btn" onclick="applyCategoryFilter('kulhad', this)">
+            <i class="fa-solid fa-mug-hot"></i> Chai Kulhads
+          </button>
+          <button class="category-filter-btn" onclick="applyCategoryFilter('diya', this)">
+            <i class="fa-solid fa-fire"></i> Sacred Diyas
+          </button>
+          <button class="category-filter-btn" onclick="applyCategoryFilter('cookware', this)">
+            <i class="fa-solid fa-bowl-food"></i> Slow-Fire Cookware
+          </button>
+        </div>
+
+        <div class="search-sort-module">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="catalogSearchField" placeholder="Search by name, craft, or volume..." onkeyup="executeCatalogSearch()">
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-matrix-grid" id="catalogGridTarget">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ENTERPRISE WHOLESALE PROCUREMENT ENGINE & CALCULATOR
+       ========================================================================== */
+  <section class="b2b-procurement-section" id="b2b-calc">
+    <div class="container">
+      <div class="procurement-calculator-card">
+        <div class="calculator-controls-left">
+          <span class="editorial-badge" style="background:#EBF8F2; color:var(--emerald-organic); border-color:#B7EAD0;">
+            <i class="fa-solid fa-chart-line"></i> Institutional Pricing Algorithm
+          </span>
+          <h3>Commercial Quotation & Margin Estimator</h3>
+          <p>Direct kiln-to-enterprise cost modeling designed for food-service directors, hospitality chains, and procurement managers. Calibrated for transparent landed costs.</p>
+
+          <div class="control-field-group">
+            <label><i class="fa-solid fa-cube"></i> Product Line Selection:</label>
+            <select class="control-select" id="estimatorProductSelect" onchange="recalculateWholesaleEstimate()">
+              <option value="tandoori-120">Tandoori Chai Kulhad (120ml - Dhaba Heavy Base)</option>
+              <option value="cutting-70">Heritage Cutting Chai Tumbler (70ml - Office & Tapri)</option>
+              <option value="cafe-ribbed-150">Contemporary Ribbed Kulhad (150ml - Barista Spec)</option>
+              <option value="matka-lassi-220">Royal Matka Amphora Vessel (220ml - Lassi & Desserts)</option>
+              <option value="diya-traditional-raw">Organic Sacred Puja Diya (Alluvial Clay Votive)</option>
+              <option value="diya-akhand-dome">Akhand Jyot Wind-Shielded Votive with Perforated Lid</option>
+            </select>
+          </div>
+
+          <div class="control-field-group">
+            <div class="slider-range-box">
+              <div class="slider-output-readout">
+                <span><i class="fa-solid fa-boxes-stacked"></i> Batch Volume (Units):</span>
+                <span id="volumeQuantityOutput" style="font-family:var(--font-mono); font-size:16px;">2,000 Units</span>
+              </div>
+              <input type="range" class="range-input-slider" id="volumeRangeSlider" min="500" max="25000" step="500" value="2000" oninput="recalculateWholesaleEstimate()">
+              <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted); font-family:var(--font-mono);">
+                <span>Min: 500 pcs</span>
+                <span>5,000 pcs</span>
+                <span>15,000 pcs</span>
+                <span>25,000+ pcs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-field-group">
+            <label><i class="fa-solid fa-map-location-dot"></i> Destination Logistics Hub:</label>
+            <select class="control-select" id="logisticsHubSelect" onchange="recalculateWholesaleEstimate()">
+              <option value="up-delhi">Delhi-NCR, Uttar Pradesh, Haryana (Zone 1 - Express)</option>
+              <option value="rajasthan-mp">Rajasthan, Punjab, Madhya Pradesh, Bihar (Zone 2)</option>
+              <option value="maharashtra-gujarat">Maharashtra, Gujarat, West Bengal (Zone 3)</option>
+              <option value="south-east">Karnataka, Telangana, Tamil Nadu, Kerala (Zone 4)</option>
+              <option value="international-export">International Air/Sea Port Export (FOB / CIF)</option>
+            </select>
+          </div>
+
+          <label class="checkbox-specification-row">
+            <input type="checkbox" id="customLogoCheckbox" onchange="recalculateWholesaleEstimate()">
+            <span style="font-size:13px; font-weight:700; color:var(--clay-charcoal);">
+              <i class="fa-solid fa-stamp" style="color:var(--terracotta-primary);"></i> Custom brand logo / monogram embossing (+₹0.30 / $0.0036 per unit)
+            </span>
+          </label>
+
+          <label class="checkbox-specification-row" style="margin-top:8px;">
+            <input type="checkbox" id="woodenCrateCheckbox" checked onchange="recalculateWholesaleEstimate()">
+            <span style="font-size:13px; font-weight:600; color:var(--text-muted);">
+              <i class="fa-solid fa-box-open" style="color:var(--emerald-organic);"></i> Heat-treated export-grade timber crating (0% Transit Damage Guarantee)
+            </span>
+          </label>
+        </div>
+
+        <!-- Calculated Summary Box -->
+        <div class="quotation-summary-panel">
+          <div>
+            <div class="summary-heading-box">
+              <h4>Institutional Proforma Estimate</h4>
+              <span>Mati Farm™ Enterprise Quotation Engine</span>
+            </div>
+
+            <div class="breakdown-line-items">
+              <div class="breakdown-row">
+                <span>Selected Line:</span>
+                <strong id="summaryItemName" style="color:#FFFFFF;">Tandoori Chai Kulhad (120ml)</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Batch Volume:</span>
+                <strong id="summaryBatchVolume" style="color:#FFFFFF; font-family:var(--font-mono);">2,000 Units</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Unit Rate (FOB Kiln):</span>
+                <strong id="summaryUnitRate" style="color:var(--gold-bright); font-size:16px; font-family:var(--font-mono);">₹2.80</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Custom Brand Stamping:</span>
+                <span id="summaryBrandCost">Excluded</span>
+              </div>
+              <div class="breakdown-row">
+                <span>Insured Freight & Handling:</span>
+                <span id="summaryFreightCost">₹500</span>
+              </div>
+              <div class="breakdown-row">
+                <span>Statutory Ceramic GST (5%):</span>
+                <span id="summaryTaxCost">₹280</span>
+              </div>
+              <div class="breakdown-row highlight-metric">
+                <span>Projected Savings vs Paper:</span>
+                <span id="summaryProjectedSavings">Approx ₹3,400</span>
+              </div>
+              <div class="breakdown-row grand-total-row">
+                <span>Net Landed Investment:</span>
+                <span id="summaryNetInvestment" style="font-family:var(--font-mono);">₹6,380</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-actions-cluster">
+            <button class="btn-dispatch-whatsapp" onclick="dispatchQuotationToWhatsApp()">
+              <i class="fa-brands fa-whatsapp"></i> Dispatch Official Proforma via WhatsApp
+            </button>
+            <button class="btn-sample-kit-action" onclick="requestEvaluationSampleKit()">
+              <i class="fa-solid fa-vial"></i> Request Hospitality Evaluation Kit (₹99 / $2)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ARTISAN GUILD STEWARDSHIP & ZERO-WASTE PHILOSOPHY
+       ========================================================================== -->
+  <section class="artisan-stewardship-section" id="stewardship">
+    <div class="container stewardship-grid">
+      <div class="guild-stats-card">
+        <span class="editorial-badge"><i class="fa-solid fa-hands-holding-circle"></i> Fair Trade Artisan Collective</span>
+        <h4 style="font-size:22px; font-weight:800; color:var(--clay-charcoal); margin:6px 0 10px;">
+          Empowering Generational Master Potters
+        </h4>
+        <p style="font-size:14.5px; color:var(--text-muted); line-height:1.6;">
+          Mati Farm™ provides direct market access to over 120 artisan families across Khurja, Gorakhpur, and the Meerut craft belt. By eradicating intermediary cartels, we uphold liveable wages, restore community dignity, and keep India’s millennia-old ceramic heritage thriving.
+        </p>
+
+        <div class="guild-metrics-matrix">
+          <div class="metric-cell">
+            <div class="metric-stat-number">1.25M+</div>
+            <div class="metric-stat-label">Vessels Dispatched</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-stat-number">120+</div>
+            <div class="metric-stat-label">Artisan Guild Families</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-stat-number">85+</div>
+            <div class="metric-stat-label">Commercial Cafe Partners</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-stat-number">0%</div>
+            <div class="metric-stat-label">Microplastic Leaching</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="artisan-narrative">
+        <span class="editorial-eyebrow">The 4-Stage Provenance</span>
+        <h3>How Every Mati Farm Vessel Is Created</h3>
+        <p>
+          We employ zero synthetic plasticizers, heavy-metal glazes, or petroleum lacquers. Sourced from organic riverbed clay and baked with sustainable wood-ash biomass.
+        </p>
+
+        <div class="process-timeline-list">
+          <div class="timeline-step">
+            <div class="timeline-index-pill">01</div>
+            <div class="timeline-step-text">
+              <h5>Alluvial Riverbed Clay Extraction</h5>
+              <p>Harvested from mineral-rich river deltas and triple-sieved through micro-mesh to achieve stone-free consistency.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-index-pill">02</div>
+            <div class="timeline-step-text">
+              <h5>Ergonomic Wheel Throwing</h5>
+              <p>Hand-thrown on traditional flywheels by master artisans to ensure calibrated wall thickness and structural balance.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-index-pill">03</div>
+            <div class="timeline-step-text">
+              <h5>48-Hour Natural Solar Curing</h5>
+              <p>Carefully dried under ambient sunlight to release internal moisture without inducing micro-fractures.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-index-pill">04</div>
+            <div class="timeline-step-text">
+              <h5>920°C Thermal Kiln Vitrification</h5>
+              <p>Fired in traditional wood-and-straw kilns to solidify density and lock in the signature petrichor aroma.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ENGINEERED TRANSIT PACKAGING (ZERO DAMAGE)
+       ========================================================================== -->
+  <section class="packaging-guarantee-section" id="packaging">
+    <div class="container">
+      <div class="editorial-header-block" style="margin-bottom:32px;">
+        <span class="editorial-eyebrow">Zero-Damage Commitment</span>
+        <h2 class="editorial-title">Engineered 4-Layer Transit Packaging</h2>
+        <p class="editorial-subhead">
+          Our specialized shock-dampening logistics framework ensures that every delicate diya and tea kulhad arrives in immaculate condition.
+        </p>
+      </div>
+
+      <div class="packaging-triad-grid">
+        <div class="packaging-pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-boxes-packing"></i></div>
+          <h4>Honeycomb Paper Matrix</h4>
+          <p>Every individual vessel is wrapped in high-tensile biodegradable honeycomb paper, forming a cellular shock cushion against vibration.</p>
+        </div>
+
+        <div class="packaging-pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-box"></i></div>
+          <h4>5-Ply Rigid Master Cartons</h4>
+          <p>Secondary protection features edge-reinforced 5-ply corrugated master cartons tested against high vertical compression loads.</p>
+        </div>
+
+        <div class="packaging-pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Frictionless Replacement Guarantee</h4>
+          <p>In the unlikely event of transit breakage, simply send a photo within 48 hours for an instant complimentary re-dispatch or full refund.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PARTNER VALIDATION SECTION
+       ========================================================================== -->
+  <section class="partner-validation-section">
+    <div class="container">
+      <div style="text-align:center; font-size:12px; font-weight:800; color:var(--text-subtle); margin-bottom:20px; text-transform:uppercase; letter-spacing:1.5px;">
+        Trusted by Premier Hospitality Groups, Tea Houses & Cultural Foundations
+      </div>
+      <div class="partner-roster-row">
+        <div class="partner-badge-item"><i class="fa-solid fa-mug-saucer"></i> Banarasi Artisan Tea Room</div>
+        <div class="partner-badge-item"><i class="fa-solid fa-mug-saucer"></i> Tandoori Chai Co. (NCR)</div>
+        <div class="partner-badge-item"><i class="fa-solid fa-mug-saucer"></i> The Grand Heritage Kulhad House</div>
+        <div class="partner-badge-item"><i class="fa-solid fa-mug-saucer"></i> Rajputana Royal Tea Lounge</div>
+        <div class="partner-badge-item"><i class="fa-solid fa-om"></i> Vedic Cultural & Temple Trusts</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER ECOSYSTEM
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns-grid">
+        <div class="footer-brand-column">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px;">
+            <img src="logo.png" alt="Mati - Bharat Ki Logo" style="width:58px; height:58px; border-radius:50%; background:#FFFFFF; padding:2px; box-shadow:0 4px 16px rgba(0,0,0,0.3); border:2px solid rgba(225,103,26,0.6);">
+            <div>
+              <h2 style="margin:0; font-size:22px; color:#FFFFFF; letter-spacing:0.5px;">MATI <span style="font-size:12px; color:#FF9248; font-family:var(--font-body); font-weight:800; background:rgba(225,103,26,0.25); padding:2px 7px; border-radius:4px; border:1px solid rgba(225,103,26,0.4);">BHARAT KI</span></h2>
+              <span style="font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.75); display:block; margin-top:3px; font-weight:600;">Inquisitive Earthen Destination</span>
+            </div>
+          </div>
+          <p>
+            Fusing India’s timeless earthenware heritage with modern international supply chains. Delivering certified non-toxic terracotta tableware, ceremonial lights, and commercial chai kulhads from village kilns to global venues.
+          </p>
+          <div style="display:flex; gap:12px; font-size:18px;">
+            <a href="#" style="color:#FFFFFF;"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" style="color:#FFFFFF;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" style="color:#FFFFFF;"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" style="color:#FFFFFF;"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-nav-column">
+          <h4>Retail Portfolio (D2C)</h4>
+          <ul class="footer-hyperlinks">
+            <li><a href="#catalog" onclick="applyCategoryFilter('diya')"><i class="fa-solid fa-angle-right"></i> Sacred Sanctum Puja Diyas</a></li>
+            <li><a href="#catalog" onclick="applyCategoryFilter('diya')"><i class="fa-solid fa-angle-right"></i> 5-Flame & Akhand Jyot Votives</a></li>
+            <li><a href="#catalog" onclick="applyCategoryFilter('diya')"><i class="fa-solid fa-angle-right"></i> Botanical Hand-Painted Sets</a></li>
+            <li><a href="#catalog" onclick="applyCategoryFilter('kulhad')"><i class="fa-solid fa-angle-right"></i> Tandoori Chai Kulhads (Pack of 12)</a></li>
+            <li><a href="#catalog" onclick="applyCategoryFilter('cookware')"><i class="fa-solid fa-angle-right"></i> Slow-Fire Culinary Handis & Carafes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-column">
+          <h4>Commercial Services (B2B)</h4>
+          <ul class="footer-hyperlinks">
+            <li><a href="#b2b-calc"><i class="fa-solid fa-angle-right"></i> Hospitality Bulk Supply (500+ Pcs)</a></li>
+            <li><a href="#b2b-calc"><i class="fa-solid fa-angle-right"></i> Custom Brand Monogram Stamping</a></li>
+            <li><a href="javascript:void(0)" onclick="requestEvaluationSampleKit()"><i class="fa-solid fa-angle-right"></i> Hospitality Evaluation Kit</a></li>
+            <li><a href="javascript:void(0)" onclick="launchWholesaleInquiryModal()"><i class="fa-solid fa-angle-right"></i> Formal Commercial Proformas & GST</a></li>
+            <li><a href="#packaging"><i class="fa-solid fa-angle-right"></i> International Export Pallet Logistics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-column">
+          <h4>Kiln Works & Corporate Desk</h4>
+          <div class="contact-descriptor-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Mati Farm™ Ceramic Works, Daurala Industrial Corridor, Meerut, UP, India - 250221</span>
+          </div>
+          <div class="contact-descriptor-row">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 7454996566 / +91 8449622999</span>
+          </div>
+          <div class="contact-descriptor-row">
+            <i class="fa-solid fa-envelope"></i>
+            <span>orders@matifarm.com / export@matifarm.com</span>
+          </div>
+          <div class="contact-descriptor-row">
+            <i class="fa-solid fa-clock"></i>
+            <span>Monday – Saturday: 08:00 – 20:00 IST</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal-bar">
+        <div>
+          © 2026 Mati Farm™ Earthenware Pvt. Ltd. All rights reserved. Handcrafted with pride in India.
+        </div>
+        <div style="display:flex; gap:16px;">
+          <a href="#" style="color:#9C8D82;">Commercial Terms</a>
+          <a href="#" style="color:#9C8D82;">Privacy & Cookie Policy</a>
+          <a href="#" style="color:#9C8D82;">Replacement & Freight Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CART SLIDEOUT DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="toggleCartDrawer()"></div>
+  <aside class="cart-drawer-sidepanel" id="cartSidepanel">
+    <div class="cart-panel-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="logo.png" alt="Mati Logo" style="width:30px; height:30px; border-radius:50%; object-fit:contain; border:1px solid rgba(225,103,26,0.3);">
+        <h3 style="margin:0; font-size:18px;"><i class="fa-solid fa-cart-shopping" style="color:var(--terracotta-primary); font-size:15px;"></i> Your Shopping Cart</h3>
+      </div>
+      <button class="close-panel-btn" onclick="toggleCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="free-shipping-tracker">
+      <div id="shippingTrackerMessage">Add items to qualify for <strong>Complimentary Shipping</strong>!</div>
+      <div class="progress-track">
+        <div class="progress-bar-fill" id="shippingProgressFill"></div>
+      </div>
+    </div>
+
+    <div class="cart-line-items-scroll" id="cartItemsListContainer">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="cart-footer-summary">
+      <div class="coupon-redemption-box">
+        <input type="text" id="couponVoucherField" placeholder="PROMO CODE (e.g. MATI10)">
+        <button onclick="applyPromotionalVoucher()">APPLY</button>
+      </div>
+
+      <div class="calculation-row">
+        <span>Cart Subtotal:</span>
+        <span id="displayCartSubtotal" style="font-family:var(--font-mono);">₹0</span>
+      </div>
+      <div class="calculation-row">
+        <span>Promotional Discount:</span>
+        <span id="displayCartDiscount" style="color:var(--emerald-organic); font-family:var(--font-mono);">-₹0</span>
+      </div>
+      <div class="calculation-row">
+        <span>Insured Freight:</span>
+        <span id="displayCartShipping" style="font-family:var(--font-mono);">₹0</span>
+      </div>
+      <div class="calculation-row net-payable">
+        <span>Total Payable:</span>
+        <span id="displayCartGrandTotal" style="font-family:var(--font-mono);">₹0</span>
+      </div>
+
+      <button class="btn-checkout-direct" onclick="launchCheckoutFlow()">
+        <i class="fa-solid fa-lock"></i> Proceed to Secure Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2-STEP D2C CHECKOUT MODAL
+       ========================================================================== -->
+  <div class="system-modal-backdrop" id="checkoutDialogModal">
+    <div class="modal-dialog-card">
+      <div class="dialog-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <img src="logo.png" alt="Mati Logo" style="width:30px; height:30px; border-radius:50%; object-fit:contain; border:1px solid rgba(225,103,26,0.3);">
+          <h3 style="margin:0;"><i class="fa-solid fa-shield-halved" style="color:var(--terracotta-primary);"></i> Delivery & Payment Protocol</h3>
+        </div>
+        <button class="close-panel-btn" onclick="closeCheckoutDialogModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="dialog-body" id="checkoutFlowBody">
+        <form onsubmit="handleDirectOrderPlacement(event)">
+          <div class="form-duo-columns">
+            <div class="form-entry-unit">
+              <label>Full Customer Name *</label>
+              <input type="text" id="custFullName" placeholder="e.g. Eleanor Vance" required>
+            </div>
+            <div class="form-entry-unit">
+              <label>Phone / WhatsApp Number *</label>
+              <input type="tel" id="custPhoneNum" placeholder="e.g. +91 98XXXXXXXX" required>
+            </div>
+          </div>
+
+          <div class="form-entry-unit">
+            <label>Delivery Street Address (Apartment, Suite, Landmark) *</label>
+            <input type="text" id="custStreetAddress" placeholder="e.g. 42 Artisans Boulevard, Suite 104" required>
+          </div>
+
+          <div class="form-duo-columns">
+            <div class="form-entry-unit">
+              <label>Postal / ZIP Code *</label>
+              <input type="text" id="custPostalZip" placeholder="e.g. 110016" required>
+            </div>
+            <div class="form-entry-unit">
+              <label>City & State / Region *</label>
+              <input type="text" id="custCityRegion" placeholder="e.g. New Delhi, Delhi" required>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <label style="font-size:12px; font-weight:700; color:var(--clay-charcoal); text-transform:uppercase;">Select Payment Instrument:</label>
+            <div class="payment-instruments-grid">
+              <div class="instrument-card active" onclick="selectPaymentInstrument('upi', this)">
+                <i class="fa-solid fa-qrcode" style="color:var(--emerald-organic);"></i>
+                <span>UPI / QR Scan</span>
+              </div>
+              <div class="instrument-card" onclick="selectPaymentInstrument('cards', this)">
+                <i class="fa-solid fa-credit-card" style="color:var(--gold-warm);"></i>
+                <span>Cards / Wire</span>
+              </div>
+              <div class="instrument-card" onclick="selectPaymentInstrument('cod', this)">
+                <i class="fa-solid fa-hand-holding-dollar" style="color:var(--terracotta-primary);"></i>
+                <span>Cash on Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--sand-canvas); padding:14px; border-radius:var(--radius-sm); margin:16px 0; border:1px solid var(--border-refined);">
+            <div style="display:flex; justify-content:space-between; font-size:14px; font-weight:800; color:var(--clay-charcoal);">
+              <span>Total Payable Consideration:</span>
+              <span id="checkoutPayableFigure" style="color:var(--terracotta-deep); font-family:var(--font-mono);">₹0</span>
+            </div>
+            <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">
+              <i class="fa-solid fa-lock"></i> 256-Bit TLS End-to-End Encryption • Zero-Fraud Guarantee
+            </div>
+          </div>
+
+          <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center;">
+            <i class="fa-solid fa-check"></i> Authorize & Place Order
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ENTERPRISE B2B WHOLESALE INQUIRY MODAL
+       ========================================================================== -->
+  <div class="system-modal-backdrop" id="wholesaleDialogModal">
+    <div class="modal-dialog-card">
+      <div class="dialog-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <img src="logo.png" alt="Mati Logo" style="width:32px; height:32px; border-radius:50%; object-fit:contain; border:1px solid rgba(225,103,26,0.3);">
+          <h3 style="margin:0;"><i class="fa-solid fa-building" style="color:var(--emerald-organic);"></i> Institutional Procurement Desk</h3>
+        </div>
+        <button class="close-panel-btn" onclick="closeWholesaleDialogModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="dialog-body">
+        <form onsubmit="handleEnterpriseInquiryDispatch(event)">
+          <div class="form-duo-columns">
+            <div class="form-entry-unit">
+              <label>Enterprise / Hospitality Brand Name *</label>
+              <input type="text" id="b2bCompanyName" placeholder="e.g. Chai & Heritage Lounges" required>
+            </div>
+            <div class="form-entry-unit">
+              <label>Procurement Officer Name *</label>
+              <input type="text" id="b2bOfficerName" placeholder="e.g. David Richardson" required>
+            </div>
+          </div>
+
+          <div class="form-duo-columns">
+            <div class="form-entry-unit">
+              <label>Official Phone / WhatsApp *</label>
+              <input type="tel" id="b2bContactPhone" placeholder="e.g. +91 98XXXXXXXX" required>
+            </div>
+            <div class="form-entry-unit">
+              <label>GST / Tax ID Number (Optional)</label>
+              <input type="text" id="b2bTaxIdentity" placeholder="e.g. 09AAAAA0000A1Z5">
+            </div>
+          </div>
+
+          <div class="form-duo-columns">
+            <div class="form-entry-unit">
+              <label>Procurement Requirement *</label>
+              <select id="b2bProcurementCategory" required>
+                <option value="commercial-kulhads">Commercial Tea Kulhads (500+ units)</option>
+                <option value="sacred-diyas">Festive Terracotta Diyas (1,000+ units)</option>
+                <option value="custom-branding">Custom Logo Stamp Embossing</option>
+                <option value="sample-evaluation">Hospitality Evaluation Sample Kit</option>
+                <option value="export-distribution">International Export Distribution</option>
+              </select>
+            </div>
+            <div class="form-entry-unit">
+              <label>Monthly Anticipated Volume *</label>
+              <select id="b2bVolumeTier" required>
+                <option value="500-1000">500 – 1,000 units / month</option>
+                <option value="1000-5000">1,000 – 5,000 units / month</option>
+                <option value="5000-20000">5,000 – 20,000 units / month</option>
+                <option value="20000+">20,000+ units / month (Full Container Load)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-entry-unit">
+            <label>Delivery Hub City & Destination Postal Code *</label>
+            <input type="text" id="b2bDeliveryHub" placeholder="e.g. London, UK / Mumbai, MH - 400001" required>
+          </div>
+
+          <div class="form-entry-unit">
+            <label>Specific Monogram or Packaging Requirements</label>
+            <textarea id="b2bCustomDirectives" rows="2" placeholder="e.g. We require 4,000 pieces of 150ml ribbed tumblers with our logo debossed on the base..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-hero-primary" style="width:100%; justify-content:center; background:linear-gradient(135deg, var(--clay-charcoal) 0%, #0D0704 100%);">
+            <i class="fa-solid fa-paper-plane"></i> Submit Formal Wholesale Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PRODUCT QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="system-modal-backdrop" id="productInspectModal">
+    <div class="modal-dialog-card" style="max-width:780px;">
+      <div class="dialog-header">
+        <h3 id="inspectModalTitle"><i class="fa-solid fa-circle-info" style="color:var(--terracotta-primary);"></i> Technical Product Profile</h3>
+        <button class="close-panel-btn" onclick="closeProductQuickView()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="dialog-body" id="inspectModalBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Concierge WhatsApp -->
+  <a href="https://wa.me/917454996566?text=Hello%20Mati%20Farm%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20artisanal%20earthenware%20and%20commercial%20wholesale%20supply." target="_blank" class="floating-concierge-pill" aria-label="Connect with Sales Concierge on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast Notification -->
+  <div class="system-toast-bubble" id="systemToast">
+    <i class="fa-solid fa-circle-check" style="color:#4ADE80;"></i>
+    <span id="systemToastMessage">Item added to your cart!</span>
+  </div>
+
+  <!-- ==========================================================================
+       MASTER JAVASCRIPT ENGINE (CURRENCY DUALITY & PROCUREMENT LOGIC)
+       ========================================================================== -->
+  <script>
+    /* Exchange Rate: 1 USD = 84.00 INR */
+    const USD_EXCHANGE_RATE = 84.00;
+    let activeCurrency = 'INR'; // 'INR' | 'USD'
+
+    const MASTER_INVENTORY = [
+      {
+        id: 'kulhad-tandoori',
+        category: 'kulhad',
+        title: 'Tandoori Chai Kulhad (120ml)',
+        subtitle: 'Heavy Reinforced Base • Thermal Heat Retention • Authentic Dhaba Style',
+        rating: 4.9,
+        reviewsCount: 342,
+        capacity: '120 ml',
+        clayType: 'Refined Alluvial Ganges Riverbed Clay',
+        kilnTemp: '920°C Thermal Kiln Fired',
+        foodSafety: 'Certified 100% Lead & Cadmium Free',
+        b2c: {
+          packSize: 12,
+          packName: 'Pack of 12 Pcs',
+          priceINR: 180,
+          originalPriceINR: 240
+        },
+        b2b: {
+          moq: '500 Pcs',
+          baseRateINR: 2.80,
+          tiers: [
+            { min: 500, max: 1999, rateINR: 3.40 },
+            { min: 2000, max: 4999, rateINR: 2.80 },
+            { min: 5000, max: 50000, rateINR: 2.20 }
+          ]
+        },
+        badge: 'Bestseller',
+        svgType: 'kulhad-tandoori'
+      },
+      {
+        id: 'kulhad-cutting',
+        category: 'kulhad',
+        title: 'Cutting Chai Tumbler (70ml)',
+        subtitle: 'Office Break & Tapri Essential • Zero Plastic Alternative',
+        rating: 4.8,
+        reviewsCount: 215,
+        capacity: '70 ml',
+        clayType: 'Natural Micro-Porous Alluvial Clay',
+        kilnTemp: '900°C Thermal Kiln Fired',
+        foodSafety: 'Certified Food Grade Vitrification',
+        b2c: {
+          packSize: 12,
+          packName: 'Pack of 12 Pcs',
+          priceINR: 140,
+          originalPriceINR: 190
+        },
+        b2b: {
+          moq: '500 Pcs',
+          baseRateINR: 2.10,
+          tiers: [
+            { min: 500, max: 1999, rateINR: 2.60 },
+            { min: 2000, max: 4999, rateINR: 2.10 },
+            { min: 5000, max: 50000, rateINR: 1.65 }
+          ]
+        },
+        badge: 'Eco Essential',
+        svgType: 'kulhad-cutting'
+      },
+      {
+        id: 'kulhad-ribbed-cafe',
+        category: 'kulhad',
+        title: 'Contemporary Ribbed Cafe Tumbler (150ml)',
+        subtitle: 'Signature Fluted Grip • Microwave Safe • Logo Stamping Ready',
+        rating: 4.9,
+        reviewsCount: 189,
+        capacity: '150 ml',
+        clayType: 'Double Refined Terracotta Clay',
+        kilnTemp: '950°C Vitrified Clay',
+        foodSafety: 'Microwave Safe & Toxin Free',
+        b2c: {
+          packSize: 12,
+          packName: 'Pack of 12 Pcs',
+          priceINR: 240,
+          originalPriceINR: 320
+        },
+        b2b: {
+          moq: '500 Pcs',
+          baseRateINR: 3.60,
+          tiers: [
+            { min: 500, max: 1999, rateINR: 4.20 },
+            { min: 2000, max: 4999, rateINR: 3.60 },
+            { min: 5000, max: 50000, rateINR: 2.90 }
+          ]
+        },
+        badge: 'Barista Choice',
+        svgType: 'kulhad-ribbed'
+      },
+      {
+        id: 'kulhad-matka-lassi',
+        category: 'kulhad',
+        title: 'Royal Matka Amphora Vessel (220ml)',
+        subtitle: 'Evaporative Cooling for Artisan Lassi, Rabdi & Masala Chai',
+        rating: 4.9,
+        reviewsCount: 164,
+        capacity: '220 ml',
+        clayType: 'High-Density Terracotta Composite',
+        kilnTemp: '920°C Thermal Kiln Fired',
+        foodSafety: 'Natural Evaporative Refrigeration',
+        b2c: {
+          packSize: 6,
+          packName: 'Pack of 6 Pcs',
+          priceINR: 220,
+          originalPriceINR: 280
+        },
+        b2b: {
+          moq: '300 Pcs',
+          baseRateINR: 5.40,
+          tiers: [
+            { min: 300, max: 999, rateINR: 6.50 },
+            { min: 1000, max: 4999, rateINR: 5.40 },
+            { min: 5000, max: 50000, rateINR: 4.60 }
+          ]
+        },
+        badge: 'Dessert Vessel',
+        svgType: 'kulhad-matka'
+      },
+      {
+        id: 'diya-traditional',
+        category: 'diya',
+        title: 'Organic Sacred Puja Diya',
+        subtitle: 'Daily Temple Sanctum & Diwali Celebrations • Deep Well',
+        rating: 4.9,
+        reviewsCount: 520,
+        capacity: '15 ml Reservoir',
+        clayType: 'Sacred Riverbed Alluvial Clay',
+        kilnTemp: '890°C Traditional Firing',
+        foodSafety: '0% Chemical Varnish or Synthetic Additives',
+        b2c: {
+          packSize: 25,
+          packName: 'Pack of 25 Pcs',
+          priceINR: 99,
+          originalPriceINR: 150
+        },
+        b2b: {
+          moq: '1,000 Pcs',
+          baseRateINR: 0.90,
+          tiers: [
+            { min: 1000, max: 4999, rateINR: 1.20 },
+            { min: 5000, max: 19999, rateINR: 0.90 },
+            { min: 20000, max: 100000, rateINR: 0.65 }
+          ]
+        },
+        badge: 'Diwali Classic',
+        svgType: 'diya-traditional'
+      },
+      {
+        id: 'diya-panchamukhi',
+        category: 'diya',
+        title: 'Pancha-Mukhi 5-Flame Altar Lamp',
+        subtitle: 'Quintuple-Wick Auspicious Lamp for Meditative Sanctuaries',
+        rating: 5.0,
+        reviewsCount: 128,
+        capacity: '40 ml Reservoir',
+        clayType: 'Carved Terracotta Sculpture Clay',
+        kilnTemp: '900°C Thermal Kiln Fired',
+        foodSafety: 'Hand-Carved Sacred Geometry',
+        b2c: {
+          packSize: 2,
+          packName: 'Set of 2 Pcs',
+          priceINR: 199,
+          originalPriceINR: 280
+        },
+        b2b: {
+          moq: '100 Pcs',
+          baseRateINR: 38.00,
+          tiers: [
+            { min: 100, max: 499, rateINR: 45.00 },
+            { min: 500, max: 1999, rateINR: 38.00 },
+            { min: 2000, max: 10000, rateINR: 32.00 }
+          ]
+        },
+        badge: 'Sacred Sanctum',
+        svgType: 'diya-pancha'
+      },
+      {
+        id: 'diya-akhand-dome',
+        category: 'diya',
+        title: 'Akhand Jyot Lamp with Perforated Lid',
+        subtitle: 'Windproof Flame Dome • Continuous 24-Hour Illumination',
+        rating: 4.9,
+        reviewsCount: 97,
+        capacity: '100 ml Oil/Ghee Capacity',
+        clayType: 'Thermal Density Terracotta',
+        kilnTemp: '960°C High-Heat Vitrification',
+        foodSafety: 'Heat-Resistant Cover with Precision Air Vents',
+        b2c: {
+          packSize: 1,
+          packName: 'Master Piece',
+          priceINR: 299,
+          originalPriceINR: 399
+        },
+        b2b: {
+          moq: '50 Pcs',
+          baseRateINR: 68.00,
+          tiers: [
+            { min: 50, max: 199, rateINR: 78.00 },
+            { min: 200, max: 999, rateINR: 68.00 },
+            { min: 1000, max: 5000, rateINR: 58.00 }
+          ]
+        },
+        badge: '24-Hour Burn',
+        svgType: 'diya-akhand'
+      },
+      {
+        id: 'diya-floral-rangoli',
+        category: 'diya',
+        title: 'Hand-Painted Floral Rangoli Diya Set',
+        subtitle: 'Botanical Herbal Dyes • Premium Presentation Box',
+        rating: 4.8,
+        reviewsCount: 210,
+        capacity: '20 ml',
+        clayType: 'Alluvial Clay + Herbal Plant Pigments',
+        kilnTemp: '900°C Thermal Kiln Fired',
+        foodSafety: 'Certified Non-Toxic Organic Pigments',
+        b2c: {
+          packSize: 12,
+          packName: 'Gift Box of 12 Pcs',
+          priceINR: 249,
+          originalPriceINR: 350
+        },
+        b2b: {
+          moq: '300 Pcs',
+          baseRateINR: 9.50,
+          tiers: [
+            { min: 300, max: 999, rateINR: 12.00 },
+            { min: 1000, max: 4999, rateINR: 9.50 },
+            { min: 5000, max: 20000, rateINR: 7.80 }
+          ]
+        },
+        badge: 'Artisan Gifting',
+        svgType: 'diya-floral'
+      },
+      {
+        id: 'cookware-handi-biryani',
+        category: 'cookware',
+        title: 'Royal Terracotta Slow-Cooking Handi (2 Litre)',
+        subtitle: 'Unglazed with Snug Lid • Gentle Dum Biryani & Lentil Convection',
+        rating: 4.9,
+        reviewsCount: 145,
+        capacity: '2.0 Litres',
+        clayType: 'Mica-Enriched Refractory Fire Clay',
+        kilnTemp: '1000°C Flameproof Grade',
+        foodSafety: 'Gas Stove & Microwave Oven Safe',
+        b2c: {
+          packSize: 1,
+          packName: '1 Handi + Snug Lid',
+          priceINR: 549,
+          originalPriceINR: 799
+        },
+        b2b: {
+          moq: '25 Pcs',
+          baseRateINR: 190.00,
+          tiers: [
+            { min: 25, max: 99, rateINR: 220.00 },
+            { min: 100, max: 499, rateINR: 190.00 },
+            { min: 500, max: 2000, rateINR: 165.00 }
+          ]
+        },
+        badge: 'Culinary Vessel',
+        svgType: 'cookware-handi'
+      },
+      {
+        id: 'cookware-water-bottle',
+        category: 'cookware',
+        title: 'Porous Terracotta Hydro Carafe (1 Litre)',
+        subtitle: 'Natural Evaporative Chilling • Fitted with Natural Cork Stopper',
+        rating: 4.8,
+        reviewsCount: 178,
+        capacity: '1000 ml',
+        clayType: 'Micro-Porous Cooling Terracotta',
+        kilnTemp: '950°C Vitrification',
+        foodSafety: 'Natural Alkaline Mineral Enrichment',
+        b2c: {
+          packSize: 1,
+          packName: '1 Carafe + Cork Cap',
+          priceINR: 399,
+          originalPriceINR: 599
+        },
+        b2b: {
+          moq: '50 Pcs',
+          baseRateINR: 125.00,
+          tiers: [
+            { min: 50, max: 199, rateINR: 145.00 },
+            { min: 200, max: 999, rateINR: 125.00 },
+            { min: 1000, max: 5000, rateINR: 105.00 }
+          ]
+        },
+        badge: 'Natural Chilling',
+        svgType: 'cookware-bottle'
+      }
+    ];
+
+    /* Format Currency in Active Mode (INR ₹ or USD $) */
+    function formatMoney(amountINR, showDecimalForSmall = false) {
+      if (activeCurrency === 'USD') {
+        const valUSD = amountINR / USD_EXCHANGE_RATE;
+        if (valUSD < 1 || showDecimalForSmall) {
+          return `$${valUSD.toFixed(3)}`;
+        }
+        return `$${valUSD.toFixed(2)}`;
+      } else {
+        if (showDecimalForSmall && amountINR % 1 !== 0) {
+          return `₹${amountINR.toFixed(2)}`;
+        }
+        return `₹${Math.round(amountINR).toLocaleString('en-IN')}`;
+      }
+    }
+
+    function setGlobalCurrency(currency) {
+      activeCurrency = currency;
+      document.getElementById('currINR').classList.toggle('active', currency === 'INR');
+      document.getElementById('currUSD').classList.toggle('active', currency === 'USD');
+
+      // Update hero preview tags
+      document.getElementById('heroP1Retail').textContent = `${formatMoney(180)} / Pack of 12`;
+      document.getElementById('heroP1B2B').textContent = `${formatMoney(2.20, true)}/pc Bulk`;
+      document.getElementById('heroP2Retail').textContent = `${formatMoney(99)} / Pack of 25`;
+      document.getElementById('heroP2B2B').textContent = `${formatMoney(0.65, true)}/pc Bulk`;
+
+      renderCatalog();
+      updateCartDrawerState();
+      recalculateWholesaleEstimate();
+      showSystemToast(`Display currency switched to ${currency}`);
+    }
+
+    function getVectorIllustration(type) {
+      if (type.startsWith('kulhad')) {
+        return `
+          <svg width="110" height="110" viewBox="0 0 160 160" fill="none">
+            <path d="M70 28 Q65 14 74 6 Q83 14 76 28" stroke="#DF6C41" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M86 32 Q93 18 85 9 Q78 18 87 32" stroke="#DF6C41" stroke-width="2.2" stroke-linecap="round" opacity="0.7"/>
+            <ellipse cx="80" cy="45" rx="36" ry="10" fill="#B84A24"/>
+            <ellipse cx="80" cy="44" rx="32" ry="8" fill="#5D2613"/>
+            <path d="M44 45 L54 130 C54 135 66 142 80 142 C94 142 106 135 106 130 L116 45 Z" fill="url(#gradK-${type})"/>
+            <path d="M48 65 Q80 75 112 65" stroke="#8F3314" stroke-width="2" fill="none"/>
+            <path d="M51 85 Q80 95 109 85" stroke="#8F3314" stroke-width="2" fill="none"/>
+            <path d="M53 105 Q80 115 107 105" stroke="#8F3314" stroke-width="2" fill="none"/>
+            <defs>
+              <linearGradient id="gradK-${type}" x1="44" y1="45" x2="116" y2="142" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#DF6C41"/>
+                <stop offset="0.5" stop-color="#B84A24"/>
+                <stop offset="1" stop-color="#7B2C10"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        `;
+      } else if (type.startsWith('diya')) {
+        return `
+          <svg width="110" height="110" viewBox="0 0 160 160" fill="none">
+            <circle cx="80" cy="45" r="22" fill="#F39C12" opacity="0.25"/>
+            <path d="M80 18 Q89 38 80 52 Q71 38 80 18 Z" fill="url(#flame-${type})"/>
+            <path d="M80 26 Q84 39 80 49 Q76 39 80 26 Z" fill="#FFF7CC"/>
+            <path d="M28 85 C28 85 45 125 80 125 C115 125 132 85 132 85 C115 95 80 95 28 85 Z" fill="url(#diyaGrad-${type})"/>
+            <ellipse cx="80" cy="85" rx="52" ry="12" fill="#B84A24"/>
+            <ellipse cx="80" cy="85" rx="46" ry="9" fill="#75290E"/>
+            <ellipse cx="80" cy="86" rx="40" ry="6" fill="#F39C12" opacity="0.45"/>
+            <path d="M74 80 L80 62 L86 80 Z" fill="#4A1E0E"/>
+            <defs>
+              <linearGradient id="flame-${type}" x1="80" y1="18" x2="80" y2="52" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFEAA7"/>
+                <stop offset="0.6" stop-color="#F39C12"/>
+                <stop offset="1" stop-color="#D35400"/>
+              </linearGradient>
+              <linearGradient id="diyaGrad-${type}" x1="28" y1="85" x2="132" y2="125" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E17055"/>
+                <stop offset="0.5" stop-color="#B84A24"/>
+                <stop offset="1" stop-color="#6E230B"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        `;
+      } else {
+        return `
+          <svg width="110" height="110" viewBox="0 0 160 160" fill="none">
+            <ellipse cx="80" cy="40" rx="35" ry="8" fill="#8F3314"/>
+            <path d="M40 50 C20 75 25 125 80 135 C135 125 140 75 120 50 Z" fill="url(#cookGrad-${type})"/>
+            <ellipse cx="80" cy="50" rx="42" ry="10" fill="#B84A24"/>
+            <circle cx="80" cy="35" r="7" fill="#6E230B"/>
+            <defs>
+              <linearGradient id="cookGrad-${type}" x1="40" y1="50" x2="120" y2="135" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#DF6C41"/>
+                <stop offset="0.5" stop-color="#8F3314"/>
+                <stop offset="1" stop-color="#4A1808"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        `;
+      }
+    }
+
+    let activeProcurementMode = 'd2c';
+    let currentCategoryScope = 'all';
+    let liveSearchQuery = '';
+    let cartStorage = [];
+    let validatedPromoCode = null;
+    let selectedPaymentGateway = 'upi';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const saved = localStorage.getItem('mf_global_cart');
+        if (saved) cartStorage = JSON.parse(saved);
+      } catch (e) {}
+
+      renderCatalog();
+      updateCartDrawerState();
+      recalculateWholesaleEstimate();
+    });
+
+    function switchProcurementMode(mode) {
+      activeProcurementMode = mode;
+      document.getElementById('modeD2C').classList.toggle('active', mode === 'd2c');
+      document.getElementById('modeB2B').classList.toggle('active', mode === 'b2b');
+      document.getElementById('channelBoxD2C').classList.toggle('active', mode === 'd2c');
+      document.getElementById('channelBoxB2B').classList.toggle('active', mode === 'b2b');
+
+      renderCatalog();
+      showSystemToast(mode === 'd2c' ? 'Direct-to-Consumer (D2C) Retail Mode Active' : 'Commercial Wholesale (B2B) Mode Active');
+    }
+
+    function applyCategoryFilter(cat, btnElement) {
+      currentCategoryScope = cat;
+      document.querySelectorAll('.category-filter-btn').forEach(b => b.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+      renderCatalog();
+    }
+
+    function executeCatalogSearch() {
+      liveSearchQuery = document.getElementById('catalogSearchField').value.toLowerCase().trim();
+      renderCatalog();
+    }
+
+    function renderCatalog() {
+      const container = document.getElementById('catalogGridTarget');
+      let filtered = MASTER_INVENTORY.filter(item => {
+        const matchCat = (currentCategoryScope === 'all') || (item.category === currentCategoryScope);
+        const matchSearch = !liveSearchQuery || 
+                            item.title.toLowerCase().includes(liveSearchQuery) || 
+                            item.subtitle.toLowerCase().includes(liveSearchQuery) ||
+                            item.category.toLowerCase().includes(liveSearchQuery);
+        return matchCat && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:64px 20px;">
+            <i class="fa-solid fa-box-open" style="font-size:48px; color:var(--border-accent); margin-bottom:12px;"></i>
+            <h3 style="color:var(--clay-charcoal);">No Products Found</h3>
+            <p style="color:var(--text-muted); font-size:14px;">Please try another search keyword or select a different category.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => {
+        const isB2B = activeProcurementMode === 'b2b';
+        return `
+          <div class="artisan-product-card" data-id="${item.id}">
+            <div class="product-overhead-badges">
+              <span class="badge-eco-certified"><i class="fa-solid fa-leaf"></i> 100% Organic</span>
+              <span class="badge-tier-indicator">${item.badge}</span>
+            </div>
+
+            <div class="product-visual-stage" onclick="openProductQuickView('${item.id}')">
+              ${getVectorIllustration(item.svgType)}
+            </div>
+
+            <div class="product-body-content">
+              <span class="category-classification">${item.category === 'kulhad' ? 'Artisanal Tumbler' : (item.category === 'diya' ? 'Ceremonial Diya' : 'Slow-Fire Cookware')}</span>
+              <h3 class="product-headline" onclick="openProductQuickView('${item.id}')">${item.title}</h3>
+              
+              <div class="product-meta-descriptors">
+                <span><i class="fa-solid fa-whiskey-glass" style="color:var(--terracotta-primary);"></i> ${item.capacity}</span>
+                <span><i class="fa-solid fa-star" style="color:var(--gold-bright);"></i> ${item.rating} (${item.reviewsCount})</span>
+              </div>
+
+              <div class="dual-pricing-capsule">
+                <div class="d2c-price-view" style="${isB2B ? 'opacity:0.5;' : ''}">
+                  <div>
+                    <span class="retail-amount" style="font-family:var(--font-mono);">${formatMoney(item.b2c.priceINR)}</span>
+                    <span style="font-size:11.5px; color:#999; text-decoration:line-through; font-family:var(--font-mono);">${formatMoney(item.b2c.originalPriceINR)}</span>
+                  </div>
+                  <span class="retail-packaging-info">${item.b2c.packName}</span>
+                </div>
+
+                <div class="b2b-price-view" style="${!isB2B ? 'opacity:0.8;' : 'background:#E8F8F0; padding:6px; border-radius:4px; border:none;'}">
+                  <div>
+                    <span class="wholesale-amount" style="font-family:var(--font-mono);">${formatMoney(item.b2b.baseRateINR, true)}/pc</span>
+                    <span style="font-size:10px; color:var(--text-muted);">Wholesale Tier</span>
+                  </div>
+                  <span class="moq-tag">MOQ: ${item.b2b.moq}</span>
+                </div>
+              </div>
+
+              <div class="card-footer-actions">
+                ${isB2B ? `
+                  <button class="btn-action-b2b" onclick="targetWholesaleLineItem('${item.id}')">
+                    <i class="fa-solid fa-calculator"></i> Calculate Volume Rate
+                  </button>
+                ` : `
+                  <button class="btn-action-cart" onclick="insertItemIntoCart('${item.id}')">
+                    <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                  </button>
+                `}
+                <button class="btn-action-inspect" onclick="openProductQuickView('${item.id}')" title="Inspect Specifications">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* Cart Operations */
+    function insertItemIntoCart(productId, quantity = 1) {
+      const prod = MASTER_INVENTORY.find(p => p.id === productId);
+      if (!prod) return;
+
+      const existing = cartStorage.find(item => item.id === productId);
+      if (existing) {
+        existing.quantity += quantity;
+      } else {
+        cartStorage.push({
+          id: prod.id,
+          title: prod.title,
+          packName: prod.b2c.packName,
+          priceINR: prod.b2c.priceINR,
+          quantity: quantity,
+          svgType: prod.svgType
+        });
+      }
+
+      commitCartStorage();
+      updateCartDrawerState();
+      showSystemToast(`'${prod.title}' added to your cart!`);
+    }
+
+    function modifyCartQuantity(productId, delta) {
+      const item = cartStorage.find(i => i.id === productId);
+      if (!item) return;
+
+      item.quantity += delta;
+      if (item.quantity <= 0) {
+        cartStorage = cartStorage.filter(i => i.id !== productId);
+      }
+
+      commitCartStorage();
+      updateCartDrawerState();
+    }
+
+    function purgeCartItem(productId) {
+      cartStorage = cartStorage.filter(i => i.id !== productId);
+      commitCartStorage();
+      updateCartDrawerState();
+      showSystemToast('Item removed from cart');
+    }
+
+    function commitCartStorage() {
+      try {
+        localStorage.setItem('mf_global_cart', JSON.stringify(cartStorage));
+      } catch (e) {}
+    }
+
+    function updateCartDrawerState() {
+      const badge = document.getElementById('cartCountBadge');
+      const container = document.getElementById('cartItemsListContainer');
+      const totalUnits = cartStorage.reduce((acc, cur) => acc + cur.quantity, 0);
+      badge.textContent = totalUnits;
+
+      if (cartStorage.length === 0) {
+        container.innerHTML = `
+          <div class="empty-cart-state">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h4 style="color:var(--clay-charcoal); margin-bottom:4px;">Your Cart is Empty</h4>
+            <p style="font-size:13px;">Explore our catalog to select hand-thrown earthenware.</p>
+          </div>
+        `;
+        document.getElementById('displayCartSubtotal').textContent = formatMoney(0);
+        document.getElementById('displayCartDiscount').textContent = `-${formatMoney(0)}`;
+        document.getElementById('displayCartShipping').textContent = formatMoney(0);
+        document.getElementById('displayCartGrandTotal').textContent = formatMoney(0);
+        document.getElementById('shippingProgressFill').style.width = '0%';
+        return;
+      }
+
+      const subtotalINR = cartStorage.reduce((sum, item) => sum + (item.priceINR * item.quantity), 0);
+      let discountINR = 0;
+      if (validatedPromoCode === 'MATI10') {
+        discountINR = Math.round(subtotalINR * 0.10);
+      } else if (validatedPromoCode === 'EARTH50') {
+        discountINR = 50;
+      }
+
+      const freeShippingThresholdINR = 499;
+      const isFreeShipping = subtotalINR >= freeShippingThresholdINR;
+      const shippingINR = isFreeShipping ? 0 : 60;
+      const grandTotalINR = Math.max(0, subtotalINR - discountINR + shippingINR);
+
+      const percent = Math.min(100, Math.round((subtotalINR / freeShippingThresholdINR) * 100));
+      document.getElementById('shippingProgressFill').style.width = `${percent}%`;
+      if (isFreeShipping) {
+        document.getElementById('shippingTrackerMessage').innerHTML = `🎉 Congratulations! You have unlocked <strong>Complimentary Shipping</strong>!`;
+      } else {
+        const delta = freeShippingThresholdINR - subtotalINR;
+        document.getElementById('shippingTrackerMessage').innerHTML = `Add <strong>${formatMoney(delta)}</strong> more to qualify for Complimentary Shipping!`;
+      }
+
+      container.innerHTML = cartStorage.map(item => `
+        <div class="cart-item-card">
+          <div class="cart-item-thumb">
+            ${getVectorIllustration(item.svgType)}
+          </div>
+          <div class="cart-item-info">
+            <div class="cart-item-title">${item.title}</div>
+            <div class="cart-item-spec">${item.packName}</div>
+            <div class="cart-item-cost" style="font-family:var(--font-mono);">${formatMoney(item.priceINR * item.quantity)}</div>
+          </div>
+          <div class="cart-item-stepper">
+            <button class="stepper-btn" onclick="modifyCartQuantity('${item.id}', -1)">-</button>
+            <span class="stepper-count">${item.quantity}</span>
+            <button class="stepper-btn" onclick="modifyCartQuantity('${item.id}', 1)">+</button>
+            <button class="cart-item-delete" onclick="purgeCartItem('${item.id}')" title="Delete">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('displayCartSubtotal').textContent = formatMoney(subtotalINR);
+      document.getElementById('displayCartDiscount').textContent = `-${formatMoney(discountINR)}`;
+      document.getElementById('displayCartShipping').textContent = isFreeShipping ? 'FREE' : formatMoney(shippingINR);
+      document.getElementById('displayCartGrandTotal').textContent = formatMoney(grandTotalINR);
+      document.getElementById('checkoutPayableFigure').textContent = formatMoney(grandTotalINR);
+    }
+
+    function toggleCartDrawer() {
+      const panel = document.getElementById('cartSidepanel');
+      const backdrop = document.getElementById('cartBackdrop');
+      panel.classList.toggle('open');
+      backdrop.classList.toggle('open');
+    }
+
+    function applyPromotionalVoucher() {
+      const voucher = document.getElementById('couponVoucherField').value.trim().toUpperCase();
+      if (voucher === 'MATI10') {
+        validatedPromoCode = 'MATI10';
+        updateCartDrawerState();
+        showSystemToast('Promotion MATI10 validated! 10% discount applied.');
+      } else if (voucher === 'EARTH50') {
+        validatedPromoCode = 'EARTH50';
+        updateCartDrawerState();
+        showSystemToast('Promotion EARTH50 validated! ₹50 discount applied.');
+      } else {
+        showSystemToast('Unrecognized promotional voucher. Please use MATI10.');
+      }
+    }
+
+    function launchCheckoutFlow() {
+      if (cartStorage.length === 0) {
+        showSystemToast('Please add items to your cart first!');
+        return;
+      }
+      toggleCartDrawer();
+      document.getElementById('checkoutDialogModal').classList.add('open');
+    }
+
+    function closeCheckoutDialogModal() {
+      document.getElementById('checkoutDialogModal').classList.remove('open');
+    }
+
+    function selectPaymentInstrument(instrument, cardElement) {
+      selectedPaymentGateway = instrument;
+      document.querySelectorAll('.instrument-card').forEach(c => c.classList.remove('active'));
+      cardElement.classList.add('active');
+    }
+
+    function handleDirectOrderPlacement(e) {
+      e.preventDefault();
+      const name = document.getElementById('custFullName').value.trim();
+      const phone = document.getElementById('custPhoneNum').value.trim();
+      const address = document.getElementById('custStreetAddress').value.trim();
+      const zip = document.getElementById('custPostalZip').value.trim();
+      const city = document.getElementById('custCityRegion').value.trim();
+      const totalFormatted = document.getElementById('displayCartGrandTotal').textContent;
+      const orderRef = 'MF-INT-' + Math.floor(100000 + Math.random() * 900000);
+
+      const target = document.getElementById('checkoutFlowBody');
+      target.innerHTML = `
+        <div class="success-celebration-pane">
+          <div style="width:72px; height:72px; background:#E8F8F0; color:var(--emerald-organic); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin:0 auto 16px;">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 style="font-size:22px; font-weight:800; color:var(--clay-charcoal); margin-bottom:8px;">Order Confirmed Successfully</h3>
+          <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">
+            Thank you, <strong>${name}</strong>. Your order for certified artisanal earthenware has been registered with our kiln logistics hub.
+          </p>
+          <div class="order-badge-pill">Order Reference: ${orderRef}</div>
+
+          <div style="background:var(--sand-canvas); border-radius:var(--radius-sm); padding:16px; text-align:left; font-size:13px; line-height:1.7; margin-bottom:20px; border:1px solid var(--border-refined);">
+            <div><strong>Consignee:</strong> ${name} (+91 ${phone})</div>
+            <div><strong>Delivery Address:</strong> ${address}, ${city} - ${zip}</div>
+            <div><strong>Payment Mode:</strong> ${selectedPaymentGateway.toUpperCase()} (${totalFormatted})</div>
+            <div><strong>Transit Packaging:</strong> 4-Layer Honeycomb Crated Box</div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <a href="https://wa.me/917454996566?text=Hello%20Mati%20Farm,%20my%20Order%20Reference%20is%20${orderRef}.%20Please%20share%20freight%20tracking%20details." target="_blank" class="btn-hero-primary" style="justify-content:center; background:#25D366;">
+              <i class="fa-brands fa-whatsapp"></i> Receive Tracking on WhatsApp
+            </a>
+            <button class="btn-hero-secondary" onclick="closeCheckoutDialogModal(); window.location.reload();" style="justify-content:center;">
+              Return to Catalog
+            </button>
+          </div>
+        </div>
+      `;
+
+      cartStorage = [];
+      commitCartStorage();
+      updateCartDrawerState();
+    }
+
+    /* ==========================================================================
+       ENTERPRISE B2B WHOLESALE ENGINE
+       ========================================================================== */
+    function recalculateWholesaleEstimate() {
+      const prodCode = document.getElementById('estimatorProductSelect').value;
+      const units = parseInt(document.getElementById('volumeRangeSlider').value, 10);
+      const hub = document.getElementById('logisticsHubSelect').value;
+      const logoActive = document.getElementById('customLogoCheckbox').checked;
+      const crateActive = document.getElementById('woodenCrateCheckbox').checked;
+
+      document.getElementById('volumeQuantityOutput').textContent = `${units.toLocaleString('en-US')} Units`;
+
+      let unitRateINR = 2.80;
+      let lineLabel = 'Tandoori Chai Kulhad (120ml)';
+
+      if (prodCode === 'tandoori-120') {
+        lineLabel = 'Tandoori Chai Kulhad (120ml)';
+        unitRateINR = units >= 5000 ? 2.20 : (units >= 2000 ? 2.80 : 3.40);
+      } else if (prodCode === 'cutting-70') {
+        lineLabel = 'Heritage Cutting Chai Tumbler (70ml)';
+        unitRateINR = units >= 5000 ? 1.65 : (units >= 2000 ? 2.10 : 2.60);
+      } else if (prodCode === 'cafe-ribbed-150') {
+        lineLabel = 'Contemporary Ribbed Kulhad (150ml)';
+        unitRateINR = units >= 5000 ? 2.90 : (units >= 2000 ? 3.60 : 4.20);
+      } else if (prodCode === 'matka-lassi-220') {
+        lineLabel = 'Royal Matka Amphora Vessel (220ml)';
+        unitRateINR = units >= 5000 ? 4.60 : (units >= 1000 ? 5.40 : 6.50);
+      } else if (prodCode === 'diya-traditional-raw') {
+        lineLabel = 'Organic Sacred Puja Diya';
+        unitRateINR = units >= 20000 ? 0.65 : (units >= 5000 ? 0.90 : 1.20);
+      } else if (prodCode === 'diya-akhand-dome') {
+        lineLabel = 'Akhand Jyot Wind-Shielded Votive';
+        unitRateINR = units >= 1000 ? 58.00 : (units >= 200 ? 68.00 : 78.00);
+      }
+
+      const brandingFeeINR = logoActive ? 0.30 : 0.00;
+      const effectiveUnitRateINR = unitRateINR + brandingFeeINR;
+      const coreProductCostINR = effectiveUnitRateINR * units;
+
+      let freightPerUnitINR = 0.20;
+      if (hub === 'up-delhi') freightPerUnitINR = 0.18;
+      else if (hub === 'rajasthan-mp') freightPerUnitINR = 0.24;
+      else if (hub === 'maharashtra-gujarat') freightPerUnitINR = 0.32;
+      else if (hub === 'south-east') freightPerUnitINR = 0.42;
+      else if (hub === 'international-export') freightPerUnitINR = 1.10; // Export handling
+
+      let freightTotalINR = Math.round(freightPerUnitINR * units);
+      if (crateActive) freightTotalINR += Math.round(units * 0.08);
+
+      const taxGST_INR = Math.round((coreProductCostINR + freightTotalINR) * 0.05);
+      const netLandedInvestmentINR = Math.round(coreProductCostINR + freightTotalINR + taxGST_INR);
+
+      // Comparative single-use paper cup benchmark (₹3.50 / $0.042 per cup)
+      const plasticCostINR = units * 3.50;
+      const savingsINR = Math.max(0, Math.round(plasticCostINR - netLandedInvestmentINR));
+
+      document.getElementById('summaryItemName').textContent = lineLabel;
+      document.getElementById('summaryBatchVolume').textContent = `${units.toLocaleString('en-US')} Units`;
+      document.getElementById('summaryUnitRate').textContent = formatMoney(unitRateINR, true);
+      document.getElementById('summaryBrandCost').textContent = logoActive ? `${formatMoney(brandingFeeINR * units)} (${formatMoney(0.30, true)}/unit)` : 'Excluded';
+      document.getElementById('summaryFreightCost').textContent = formatMoney(freightTotalINR);
+      document.getElementById('summaryTaxCost').textContent = `${formatMoney(taxGST_INR)} (Input Credit Eligible)`;
+      document.getElementById('summaryProjectedSavings').textContent = savingsINR > 0 ? `Approx ${formatMoney(savingsINR)}` : 'Eco-Certified Sustainable';
+      document.getElementById('summaryNetInvestment').textContent = formatMoney(netLandedInvestmentINR);
+    }
+
+    function dispatchQuotationToWhatsApp() {
+      const lineName = document.getElementById('summaryItemName').textContent;
+      const batch = document.getElementById('summaryBatchVolume').textContent;
+      const rate = document.getElementById('summaryUnitRate').textContent;
+      const total = document.getElementById('summaryNetInvestment').textContent;
+      const logo = document.getElementById('customLogoCheckbox').checked ? 'Required' : 'Standard Unbranded';
+
+      const textPayload = encodeURIComponent(
+        `Dear Mati Farm™ Commercial Desk,\n\n` +
+        `I am requesting a formal commercial quotation for institutional supply:\n` +
+        `• Line Item: ${lineName}\n` +
+        `• Volume: ${batch}\n` +
+        `• Calibrated FOB Rate: ${rate} per unit\n` +
+        `• Custom Logo Embossing: ${logo}\n` +
+        `• Estimated Landed Investment: ${total}\n\n` +
+        `Please provide dispatch schedules, freight logistics specifications, and formal banking proforma.`
+      );
+
+      window.open(`https://wa.me/917454996566?text=${textPayload}`, '_blank');
+    }
+
+    function targetWholesaleLineItem(productId) {
+      const selector = document.getElementById('estimatorProductSelect');
+      if (productId.includes('tandoori')) selector.value = 'tandoori-120';
+      else if (productId.includes('cutting')) selector.value = 'cutting-70';
+      else if (productId.includes('ribbed')) selector.value = 'cafe-ribbed-150';
+      else if (productId.includes('matka')) selector.value = 'matka-lassi-220';
+      else if (productId.includes('traditional')) selector.value = 'diya-traditional-raw';
+      else if (productId.includes('akhand')) selector.value = 'diya-akhand-dome';
+
+      recalculateWholesaleEstimate();
+      document.getElementById('b2b-calc').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function launchWholesaleInquiryModal() {
+      document.getElementById('wholesaleDialogModal').classList.add('open');
+    }
+
+    function closeWholesaleDialogModal() {
+      document.getElementById('wholesaleDialogModal').classList.remove('open');
+    }
+
+    function requestEvaluationSampleKit() {
+      const field = document.getElementById('b2bProcurementCategory');
+      if (field) field.value = 'sample-evaluation';
+      launchWholesaleInquiryModal();
+    }
+
+    function handleEnterpriseInquiryDispatch(e) {
+      e.preventDefault();
+      const company = document.getElementById('b2bCompanyName').value.trim();
+      const officer = document.getElementById('b2bOfficerName').value.trim();
+      const phone = document.getElementById('b2bContactPhone').value.trim();
+      const cat = document.getElementById('b2bProcurementCategory').value;
+      const vol = document.getElementById('b2bVolumeTier').value;
+      const hub = document.getElementById('b2bDeliveryHub').value.trim();
+
+      closeWholesaleDialogModal();
+      showSystemToast('Institutional inquiry registered! Our commercial logistics desk will respond within 2 hours.');
+
+      const waMsg = encodeURIComponent(
+        `Dear Mati Farm Commercial Desk, My name is ${officer} from ${company} (${hub}). ` +
+        `We are requesting wholesale proforma for ${cat} (Projected Volume: ${vol}). Please reach me at ${phone}.`
+      );
+      setTimeout(() => {
+        window.open(`https://wa.me/917454996566?text=${waMsg}`, '_blank');
+      }, 700);
+    }
+
+    /* Modal Quick Inspect */
+    function openProductQuickView(productId) {
+      const prod = MASTER_INVENTORY.find(p => p.id === productId);
+      if (!prod) return;
+
+      document.getElementById('inspectModalTitle').innerHTML = `
+        <i class="fa-solid fa-leaf" style="color:var(--emerald-organic);"></i> ${prod.title}
+      `;
+
+      const body = document.getElementById('inspectModalBody');
+      body.innerHTML = `
+        <div class="quick-specs-grid">
+          <div class="quick-specs-stage">
+            ${getVectorIllustration(prod.svgType)}
+          </div>
+
+          <div>
+            <span style="font-size:11.5px; font-weight:800; color:var(--terracotta-primary); text-transform:uppercase;">${prod.badge}</span>
+            <h3 style="font-size:22px; color:var(--clay-charcoal); margin:4px 0 8px;">${prod.title}</h3>
+            <p style="font-size:14px; color:var(--text-muted); margin-bottom:14px;">${prod.subtitle}</p>
+
+            <div style="background:var(--sand-canvas); padding:12px; border-radius:var(--radius-sm); margin-bottom:16px; border:1px solid var(--border-refined); font-size:13px;">
+              <div><strong>Raw Material:</strong> ${prod.clayType}</div>
+              <div><strong>Kiln Temperature:</strong> ${prod.kilnTemp}</div>
+              <div><strong>Food Safety Standard:</strong> ${prod.foodSafety}</div>
+              <div><strong>Volumetric Capacity:</strong> ${prod.capacity}</div>
+            </div>
+
+            <h5 style="font-size:12.5px; font-weight:800; color:var(--clay-charcoal); margin-bottom:4px; text-transform:uppercase;">Wholesale Volume Slabs (B2B):</h5>
+            <table class="volume-breakdown-table">
+              <thead>
+                <tr>
+                  <th>Batch Tier</th>
+                  <th>Unit Rate</th>
+                  <th>Commercial Advantage</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${prod.b2b.tiers.map(t => `
+                  <tr>
+                    <td>${t.min.toLocaleString('en-US')} – ${t.max.toLocaleString('en-US')} Units</td>
+                    <td><strong style="color:var(--emerald-organic); font-family:var(--font-mono);">${formatMoney(t.rateINR, true)}</strong></td>
+                    <td>${t.rateINR < prod.b2b.tiers[0].rateINR ? 'High-Volume Discount' : 'Base Wholesale Rate'}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+
+            <div style="display:flex; gap:12px; margin-top:20px;">
+              <button class="btn-hero-primary" onclick="insertItemIntoCart('${prod.id}'); closeProductQuickView();" style="flex:1; justify-content:center;">
+                <i class="fa-solid fa-cart-plus"></i> Buy Retail (${formatMoney(prod.b2c.priceINR)})
+              </button>
+              <button class="btn-hero-secondary" onclick="targetWholesaleLineItem('${prod.id}'); closeProductQuickView();" style="flex:1; justify-content:center;">
+                <i class="fa-solid fa-calculator"></i> Wholesale Proforma
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('productInspectModal').classList.add('open');
+    }
+
+    function closeProductQuickView() {
+      document.getElementById('productInspectModal').classList.remove('open');
+    }
+
+    function showSystemToast(msg) {
+      const toast = document.getElementById('systemToast');
+      const text = document.getElementById('systemToastMessage');
+      text.textContent = msg;
+      toast.classList.add('visible');
+      setTimeout(() => {
+        toast.classList.remove('visible');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>

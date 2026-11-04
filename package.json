@@ -1,0 +1,24 @@
+{
+  "name": "mati-farm",
+  "version": "1.0.0",
+  "description": "Mati Farm™ - Artisanal Earthenware, Sacred Clay Diyas & Commercial Chai Kulhads (B2B & B2C Marketplace)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "mati-farm",
+    "terracotta",
+    "clay-kulhads",
+    "chai-cups",
+    "sacred-diyas",
+    "earthenware",
+    "pottery",
+    "b2b",
+    "b2c",
+    "ecommerce"
+  ],
+  "author": "Mati Farm Earthenware Pvt. Ltd.",
+  "license": "ISC"
+}
